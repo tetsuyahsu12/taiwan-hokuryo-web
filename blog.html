@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>最新消息與洞察｜台灣北菱股份有限公司</title>
+  <meta name="description" content="台灣北菱最新消息、採購與產業趨勢觀察、AquaPort 自動給水系統應用案例分享。掌握台日商務最前線的洞察。" />
+  <meta name="keywords" content="台灣北菱,最新消息,採購趨勢,AquaPort 案例,日台商務,智慧農業" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hk: {
+              primary:'#2C76A8', dark:'#24618B', accent:'#FBA505', accentLight:'#FCB32A',
+              text:'#7A7A7A', heading:'#393939', border:'#DDDDDD',
+              soft:'#FAFBFC', section:'#F9F9F9'
+            }
+          },
+          fontFamily: {
+            sans: ['Noto Sans TC', 'Noto Sans JP', 'Inter', 'sans-serif'],
+            display: ['Inter', 'Noto Sans JP', 'Noto Sans TC', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    /* Blog 專用樣式 */
+    .hk-cat-pill {
+      display: inline-flex; align-items: center;
+      padding: 0.3rem 0.85rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      border-radius: 999px;
+      background: var(--hk-bg-soft);
+      color: var(--hk-primary);
+      text-transform: uppercase;
+    }
+    .hk-cat-pill.is-aqua  { background: rgba(251,165,5,0.15); color: var(--hk-accent); }
+    .hk-cat-pill.is-news  { background: rgba(44,118,168,0.10); color: var(--hk-primary); }
+    .hk-cat-pill.is-trend { background: rgba(57,57,57,0.06); color: var(--hk-heading); }
+
+    .hk-tab {
+      padding: 0.7rem 1.3rem;
+      border: 1px solid var(--hk-border);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--hk-text);
+      background: #fff;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+    .hk-tab:hover { color: var(--hk-primary); border-color: var(--hk-primary); }
+    .hk-tab.active {
+      background: var(--hk-primary);
+      color: #fff;
+      border-color: var(--hk-primary);
+    }
+
+    .hk-article-card {
+      display: flex; flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--hk-border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all .3s ease;
+      height: 100%;
+    }
+    .hk-article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 48px -24px rgba(36,97,139,.25);
+      border-color: var(--hk-primary);
+    }
+    .hk-article-card .thumb {
+      aspect-ratio: 16/10;
+      background: linear-gradient(135deg, #FAFBFC, #ffffff);
+      position: relative;
+      overflow: hidden;
+    }
+    .hk-article-card.is-hidden { display: none !important; }
+  </style>
+</head>
+
+<body class="bg-white text-hk-text">
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header data-header class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-hk">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="flex items-center justify-between h-[72px]">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded bg-hk-primary flex items-center justify-center text-white font-display font-extrabold text-lg">北</div>
+          <div class="leading-tight">
+            <div class="text-[15px] font-bold text-hk-heading"><span class="lang-tw">台灣北菱</span><span class="lang-jp">台湾北菱</span></div>
+            <div class="text-[10px] tracking-[0.2em] text-hk-primary font-semibold">TAIWAN HOKURYO</div>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html"    class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+          <a href="about.html"    class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a>
+          <a href="products.html" class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a>
+          <a href="blog.html"     class="text-sm font-semibold text-hk-primary"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a>
+          <a href="contact.html"  class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <div class="hk-lang-switch" role="group" aria-label="Language switcher">
+            <button data-lang-btn="tw" class="active">中文</button>
+            <button data-lang-btn="jp">日本語</button>
+          </div>
+          <a href="contact.html" class="hidden md:inline-flex hk-btn-primary text-sm">
+            <span class="lang-tw">聯絡諮詢</span><span class="lang-jp">お問合せ</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <button data-menu-toggle class="lg:hidden p-2 text-hk-heading" aria-expanded="false" aria-label="Open menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav data-mobile-nav class="hk-mobile-nav lg:hidden fixed top-[72px] right-0 bottom-0 w-full sm:w-[320px] bg-white border-l border-hk px-6 py-8 space-y-1 shadow-2xl">
+      <a href="index.html"    class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+      <a href="about.html"    class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a>
+      <a href="products.html" class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a>
+      <a href="blog.html"     class="block py-3 text-base font-semibold text-hk-primary border-b border-hk"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a>
+      <a href="contact.html"  class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a>
+    </nav>
+  </header>
+
+
+  <main class="pt-[72px]">
+
+    <!-- ============================================================
+         PAGE HERO
+         ============================================================ -->
+    <section class="hk-hero-bg relative overflow-hidden">
+      <div class="absolute inset-0 hk-grid-pattern opacity-50"></div>
+      <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-24">
+        <nav class="flex items-center gap-2 text-xs text-hk-text mb-8">
+          <a href="index.html" class="hover:text-hk-primary"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+          <span>/</span>
+          <span class="text-hk-heading font-medium"><span class="lang-tw">最新消息與洞察</span><span class="lang-jp">最新ニュース・インサイト</span></span>
+        </nav>
+
+        <span class="hk-eyebrow mb-4">INSIGHTS &amp; NEWS</span>
+        <h1 class="font-display font-extrabold text-hk-heading text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mt-4 mb-6 max-w-4xl">
+          <span class="lang-tw">台日商務的<br>最前線觀察。</span>
+          <span class="lang-jp">日台ビジネスの<br>最前線インサイト。</span>
+        </h1>
+        <p class="text-lg text-hk-heading max-w-3xl leading-relaxed">
+          <span class="lang-tw">公司最新消息、採購與產業趨勢、AquaPort 應用案例——由 25 年資深團隊整理，協助您掌握決策關鍵情報。</span>
+          <span class="lang-jp">企業ニュース、調達・産業トレンド、AquaPort 事例——25 年のベテランチームが整理する、意思決定のための情報をお届けします。</span>
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FEATURED ARTICLE (置頂特色文章)
+         ============================================================ -->
+    <section class="py-16 lg:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="hk-reveal">
+
+          <div class="flex items-center gap-3 mb-6">
+            <span class="hk-eyebrow">FEATURED</span>
+          </div>
+
+          <article class="grid lg:grid-cols-12 gap-8 items-center bg-hk-soft border border-hk rounded-2xl overflow-hidden">
+
+            <!-- Visual -->
+            <a href="blog-article.html" class="lg:col-span-6 block group">
+              <div class="aspect-[4/3] lg:aspect-[5/4] relative overflow-hidden">
+                <img src="assets/images/aquaport-on-field.jpg"
+                     alt="AquaPort 水田實景"
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                     loading="lazy" />
+                <span class="absolute top-5 left-5 hk-cat-pill is-aqua">
+                  <span class="lang-tw">AquaPort 應用案例</span><span class="lang-jp">AquaPort 事例</span>
+                </span>
+              </div>
+            </a>
+
+            <!-- Body -->
+            <div class="lg:col-span-6 p-8 lg:p-12">
+              <div class="flex items-center gap-3 text-xs text-hk-text mb-4">
+                <time datetime="2026-04-22">2026.04.22</time>
+                <span>・</span>
+                <span><span class="lang-tw">8 分鐘閱讀</span><span class="lang-jp">8 分で読了</span></span>
+                <span>・</span>
+                <span><span class="lang-tw">編輯團隊</span><span class="lang-jp">編集部</span></span>
+              </div>
+              <h2 class="font-display font-extrabold text-2xl lg:text-4xl text-hk-heading leading-tight mb-5">
+                <a href="blog-article.html" class="hover:text-hk-primary transition">
+                  <span class="lang-tw">嘉義水田實證：導入 AquaPort 後，水管理工時減少 67%</span>
+                  <span class="lang-jp">嘉義水田での実証：AquaPort 導入で水管理工数が 67% 削減</span>
+                </a>
+              </h2>
+              <p class="text-base leading-relaxed mb-6">
+                <span class="lang-tw">與在地農民聯手導入 AquaPort 後，原本一天三趟的巡田改為兩週一次的電池檢查。我們訪問了參與計畫的農戶，記錄這套無須電源工程、4 顆電池可運作半年的智慧灌溉系統，如何重新定義水田水管理的工作節奏。</span>
+                <span class="lang-jp">嘉義の農家と連携し AquaPort を導入。1 日 3 回の見回りが 2 週間に 1 度の電池確認に。電源工事不要・単一電池 4 本で半年稼働するスマート灌漑が、水田の水管理ワークフローをどう再定義したかを取材しました。</span>
+              </p>
+              <a href="blog-article.html" class="hk-btn-primary">
+                <span class="lang-tw">閱讀完整文章</span><span class="lang-jp">続きを読む</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FILTER TABS
+         ============================================================ -->
+    <section class="py-12 bg-white border-y border-hk sticky top-[72px] z-30 backdrop-blur-sm bg-white/95">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+
+          <div class="flex items-center gap-3 flex-wrap" data-filter-group>
+            <button class="hk-tab active" data-filter="all">
+              <span class="lang-tw">全部文章</span><span class="lang-jp">すべて</span>
+            </button>
+            <button class="hk-tab" data-filter="news">
+              <span class="lang-tw">最新消息</span><span class="lang-jp">お知らせ</span>
+            </button>
+            <button class="hk-tab" data-filter="trend">
+              <span class="lang-tw">採購與產業趨勢</span><span class="lang-jp">調達・産業トレンド</span>
+            </button>
+            <button class="hk-tab" data-filter="aqua">
+              <span class="lang-tw">AquaPort 應用案例</span><span class="lang-jp">AquaPort 事例</span>
+            </button>
+          </div>
+
+          <!-- Search -->
+          <div class="relative md:w-72">
+            <input type="search"
+                   data-blog-search
+                   placeholder=""
+                   class="w-full pl-10 pr-4 py-2.5 text-sm border border-hk rounded-full bg-white focus:outline-none focus:border-hk-primary focus:ring-2 focus:ring-hk-primary/20 transition" />
+            <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-hk-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         ARTICLE GRID
+         ============================================================ -->
+    <section class="py-16 lg:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 hk-reveal" data-article-grid>
+
+          <!-- 1 -->
+          <article class="hk-article-card" data-cat="news" data-keywords="2026 年度 事業 案內 手冊">
+            <a href="blog-article.html" class="thumb hk-img-ph">IMG ・ NEWS COVER</a>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="hk-cat-pill is-news mb-3"><span class="lang-tw">最新消息</span><span class="lang-jp">お知らせ</span></span>
+              <h3 class="font-bold text-hk-heading text-lg leading-snug mb-3 flex-1">
+                <a href="blog-article.html" class="hover:text-hk-primary transition">
+                  <span class="lang-tw">2026 年度新版公司事業介紹手冊正式上線</span>
+                  <span class="lang-jp">2026 年度版 事業案内パンフレット公開</span>
+                </a>
+              </h3>
+              <p class="text-sm leading-relaxed mb-4">
+                <span class="lang-tw">2026 年度起，台灣北菱聚焦兩大核心：海外業務代行＋ AquaPort 自動給水系統。新版手冊已可下載⋯</span>
+                <span class="lang-jp">2026 年度より、海外業務代行 ＋ AquaPort 自動給水システムの 2 本柱に集中。新パンフレットダウンロード可⋯</span>
+              </p>
+              <div class="text-xs text-hk-text flex items-center gap-2">
+                <time datetime="2026-04-30">2026.04.30</time>
+                <span>・</span>
+                <span><span class="lang-tw">3 分鐘</span><span class="lang-jp">3 分</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="hk-article-card" data-cat="trend" data-keywords="電子零件 供應鏈 半導體 2026">
+            <a href="blog-article.html" class="thumb hk-img-ph">IMG ・ TREND COVER</a>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="hk-cat-pill is-trend mb-3"><span class="lang-tw">採購趨勢</span><span class="lang-jp">調達トレンド</span></span>
+              <h3 class="font-bold text-hk-heading text-lg leading-snug mb-3 flex-1">
+                <a href="blog-article.html" class="hover:text-hk-primary transition">
+                  <span class="lang-tw">台灣電子零件供應鏈 2026 上半年觀察</span>
+                  <span class="lang-jp">台湾電子部品サプライチェーン 2026 上期レビュー</span>
+                </a>
+              </h3>
+              <p class="text-sm leading-relaxed mb-4">
+                <span class="lang-tw">PCB、半導體、被動元件——三大品項在 2026 上半年的價格、交期與在地產能變化分析。</span>
+                <span class="lang-jp">PCB・半導体・受動部品——3 大品目の 2026 上期における価格・納期・現地生産能力の動向分析。</span>
+              </p>
+              <div class="text-xs text-hk-text flex items-center gap-2">
+                <time datetime="2026-04-15">2026.04.15</time>
+                <span>・</span>
+                <span><span class="lang-tw">12 分鐘</span><span class="lang-jp">12 分</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="hk-article-card" data-cat="aqua" data-keywords="水田 自動給水 案例 嘉義">
+            <a href="blog-article.html" class="thumb relative">
+              <img src="assets/images/aquaport-on-field.jpg" class="w-full h-full object-cover" alt="AquaPort 案例" loading="lazy" />
+            </a>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="hk-cat-pill is-aqua mb-3"><span class="lang-tw">AquaPort 應用</span><span class="lang-jp">AquaPort 事例</span></span>
+              <h3 class="font-bold text-hk-heading text-lg leading-snug mb-3 flex-1">
+                <a href="blog-article.html" class="hover:text-hk-primary transition">
+                  <span class="lang-tw">水田自動給水系統實地導入案例分享</span>
+                  <span class="lang-jp">水田自動給水システム 現地導入事例</span>
+                </a>
+              </h3>
+              <p class="text-sm leading-relaxed mb-4">
+                <span class="lang-tw">與嘉義水田農戶合作的實證紀錄：水管理工時減少 67%，水位掌握度全面提升。</span>
+                <span class="lang-jp">嘉義の水田農家との実証記録：水管理工数 67% 削減、水位管理精度が大幅向上。</span>
+              </p>
+              <div class="text-xs text-hk-text flex items-center gap-2">
+                <time datetime="2026-03-28">2026.03.28</time>
+                <span>・</span>
+                <span><span class="lang-tw">8 分鐘</span><span class="lang-jp">8 分</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="hk-article-card" data-cat="trend" data-keywords="鋁壓鑄 塑膠成型 採購">
+            <a href="blog-article.html" class="thumb hk-img-ph">IMG ・ FACTORY COVER</a>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="hk-cat-pill is-trend mb-3"><span class="lang-tw">採購趨勢</span><span class="lang-jp">調達トレンド</span></span>
+              <h3 class="font-bold text-hk-heading text-lg leading-snug mb-3 flex-1">
+                <a href="blog-article.html" class="hover:text-hk-primary transition">
+                  <span class="lang-tw">鋁壓鑄與塑膠成型品在台採購全攻略</span>
+                  <span class="lang-jp">アルミダイカスト・プラスチック成形 台湾調達完全ガイド</span>
+                </a>
+              </h3>
+              <p class="text-sm leading-relaxed mb-4">
+                <span class="lang-tw">從新北、桃園到台中，5 個城市的供應商生態與議價節奏，一次看懂。</span>
+                <span class="lang-jp">新北・桃園・台中まで、5 都市のサプライヤーエコシステムと価格交渉のリズム解説。</span>
+              </p>
+              <div class="text-xs text-hk-text flex items-center gap-2">
+                <time datetime="2026-03-12">2026.03.12</time>
+                <span>・</span>
+                <span><span class="lang-tw">10 分鐘</span><span class="lang-jp">10 分</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="hk-article-card" data-cat="news" data-keywords="員工招募 駐外人員">
+            <a href="blog-article.html" class="thumb hk-img-ph">IMG ・ HIRING</a>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="hk-cat-pill is-news mb-3"><span class="lang-tw">最新消息</span><span class="lang-jp">お知らせ</span></span>
+              <h3 class="font-bold text-hk-heading text-lg leading-snug mb-3 flex-1">
+                <a href="blog-article.html" class="hover:text-hk-primary transition">
+                  <span class="lang-tw">徵才｜業務代行專員（中日文皆可）</span>
+                  <span class="lang-jp">採用｜業務代行スタッフ（中・日 バイリンガル）</span>
+                </a>
+              </h3>
+              <p class="text-sm leading-relaxed mb-4">
+                <span class="lang-tw">尋找喜歡台日商務、能與日方客戶對應、熟悉採購／物流流程的夥伴一同成長。</span>
+                <span class="lang-jp">日台ビジネスを楽しめる、調達・物流に詳しい仲間を募集中。</span>
+              </p>
+              <div class="text-xs text-hk-text flex items-center gap-2">
+                <time datetime="2026-02-20">2026.02.20</time>
+                <span>・</span>
+                <span><span class="lang-tw">5 分鐘</span><span class="lang-jp">5 分</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="hk-article-card" data-cat="aqua" data-keywords="AquaPort 安裝 教學 PVC">
+            <a href="blog-article.html" class="thumb relative">
+              <img src="assets/images/aquaport-installation.jpg" class="w-full h-full object-cover" alt="AquaPort 安裝" loading="lazy" />
+            </a>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="hk-cat-pill is-aqua mb-3"><span class="lang-tw">AquaPort 應用</span><span class="lang-jp">AquaPort 事例</span></span>
+              <h3 class="font-bold text-hk-heading text-lg leading-snug mb-3 flex-1">
+                <a href="blog-article.html" class="hover:text-hk-primary transition">
+                  <span class="lang-tw">3 步驟搞定 AquaPort 田間安裝</span>
+                  <span class="lang-jp">3 ステップで完了する AquaPort 設置</span>
+                </a>
+              </h3>
+              <p class="text-sm leading-relaxed mb-4">
+                <span class="lang-tw">圖解教學：連接 PVC 管→調整 2 顆感測器→放入電池，無須電源工程。</span>
+                <span class="lang-jp">図解解説：塩ビ管接続 → センサー調整 → 電池投入。電源工事不要。</span>
+              </p>
+              <div class="text-xs text-hk-text flex items-center gap-2">
+                <time datetime="2026-02-05">2026.02.05</time>
+                <span>・</span>
+                <span><span class="lang-tw">6 分鐘</span><span class="lang-jp">6 分</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="hk-article-card" data-cat="trend" data-keywords="保稅倉庫 通關 半導體 進出口">
+            <a href="blog-article.html" class="thumb hk-img-ph">IMG ・ CUSTOMS</a>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="hk-cat-pill is-trend mb-3"><span class="lang-tw">採購趨勢</span><span class="lang-jp">調達トレンド</span></span>
+              <h3 class="font-bold text-hk-heading text-lg leading-snug mb-3 flex-1">
+                <a href="blog-article.html" class="hover:text-hk-primary transition">
+                  <span class="lang-tw">半導體進出口通關與保稅倉儲實務</span>
+                  <span class="lang-jp">半導体輸出入通関と保税倉庫の実務</span>
+                </a>
+              </h3>
+              <p class="text-sm leading-relaxed mb-4">
+                <span class="lang-tw">日本、韓國半導體在台通關常見地雷、節流關稅技巧與保稅倉發貨流程說明。</span>
+                <span class="lang-jp">日本・韓国半導体の台湾通関でよくある落とし穴、関税最適化、保税倉出荷のフロー解説。</span>
+              </p>
+              <div class="text-xs text-hk-text flex items-center gap-2">
+                <time datetime="2026-01-20">2026.01.20</time>
+                <span>・</span>
+                <span><span class="lang-tw">15 分鐘</span><span class="lang-jp">15 分</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="hk-article-card" data-cat="news" data-keywords="春節 連假 公告">
+            <a href="blog-article.html" class="thumb hk-img-ph">IMG ・ HOLIDAY</a>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="hk-cat-pill is-news mb-3"><span class="lang-tw">最新消息</span><span class="lang-jp">お知らせ</span></span>
+              <h3 class="font-bold text-hk-heading text-lg leading-snug mb-3 flex-1">
+                <a href="blog-article.html" class="hover:text-hk-primary transition">
+                  <span class="lang-tw">2026 年春節休假公告</span>
+                  <span class="lang-jp">2026 年 旧正月休暇のお知らせ</span>
+                </a>
+              </h3>
+              <p class="text-sm leading-relaxed mb-4">
+                <span class="lang-tw">休假期間 2026/2/14 - 2/19，急件處理請聯絡 info@hokuryo.com.tw。</span>
+                <span class="lang-jp">休業期間 2026/2/14 - 2/19。緊急のご用件は info@hokuryo.com.tw まで。</span>
+              </p>
+              <div class="text-xs text-hk-text flex items-center gap-2">
+                <time datetime="2026-01-15">2026.01.15</time>
+                <span>・</span>
+                <span><span class="lang-tw">2 分鐘</span><span class="lang-jp">2 分</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9 -->
+          <article class="hk-article-card" data-cat="aqua" data-keywords="智慧農業 IoT 灌溉 趨勢">
+            <a href="blog-article.html" class="thumb hk-img-ph">IMG ・ SMART AGRI</a>
+            <div class="p-6 flex flex-col flex-1">
+              <span class="hk-cat-pill is-aqua mb-3"><span class="lang-tw">AquaPort 應用</span><span class="lang-jp">AquaPort 事例</span></span>
+              <h3 class="font-bold text-hk-heading text-lg leading-snug mb-3 flex-1">
+                <a href="blog-article.html" class="hover:text-hk-primary transition">
+                  <span class="lang-tw">智慧農業浪潮下，自動灌溉的下一步</span>
+                  <span class="lang-jp">スマート農業時代、自動灌漑の次なる一歩</span>
+                </a>
+              </h3>
+              <p class="text-sm leading-relaxed mb-4">
+                <span class="lang-tw">從日本到台灣，智慧灌溉如何在勞動力短缺、淨零碳排目標下重新定義稻作。</span>
+                <span class="lang-jp">日本から台湾まで、労働力不足とカーボンニュートラル目標下でスマート灌漑が稲作をどう再定義するか。</span>
+              </p>
+              <div class="text-xs text-hk-text flex items-center gap-2">
+                <time datetime="2025-12-18">2025.12.18</time>
+                <span>・</span>
+                <span><span class="lang-tw">11 分鐘</span><span class="lang-jp">11 分</span></span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+
+        <!-- 篩選後若無結果 -->
+        <div data-empty class="hidden text-center py-20 text-hk-text">
+          <div class="text-4xl mb-3">🍵</div>
+          <p class="text-base">
+            <span class="lang-tw">沒有符合條件的文章。試試其他分類或關鍵字。</span>
+            <span class="lang-jp">該当する記事が見つかりませんでした。別のカテゴリまたはキーワードをお試しください。</span>
+          </p>
+        </div>
+
+
+        <!-- Pagination -->
+        <nav class="mt-16 flex items-center justify-center gap-2 hk-reveal" aria-label="Pagination">
+          <button class="w-10 h-10 rounded-full border border-hk text-hk-text disabled:opacity-40 disabled:cursor-not-allowed" disabled>
+            <svg class="mx-auto" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="w-10 h-10 rounded-full bg-hk-primary text-white font-semibold">1</button>
+          <button class="w-10 h-10 rounded-full border border-hk text-hk-heading font-semibold hover:border-hk-primary hover:text-hk-primary transition">2</button>
+          <button class="w-10 h-10 rounded-full border border-hk text-hk-heading font-semibold hover:border-hk-primary hover:text-hk-primary transition">3</button>
+          <span class="px-2 text-hk-text">⋯</span>
+          <button class="w-10 h-10 rounded-full border border-hk text-hk-heading font-semibold hover:border-hk-primary hover:text-hk-primary transition">8</button>
+          <button class="w-10 h-10 rounded-full border border-hk text-hk-heading hover:border-hk-primary hover:text-hk-primary transition">
+            <svg class="mx-auto" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </nav>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         NEWSLETTER CTA
+         ============================================================ -->
+    <section class="py-16 lg:py-20 bg-hk-section">
+      <div class="max-w-4xl mx-auto px-5 lg:px-8 text-center hk-reveal">
+        <span class="hk-eyebrow justify-center">SUBSCRIBE</span>
+        <h2 class="hk-h-decorated text-center font-display font-extrabold text-3xl lg:text-4xl text-hk-heading mt-4 mb-5">
+          <span class="lang-tw">收下我們的洞察電子報</span>
+          <span class="lang-jp">私たちのインサイトを受け取る</span>
+        </h2>
+        <p class="text-base mb-8 max-w-2xl mx-auto">
+          <span class="lang-tw">每月一封，整理當月台日採購行情、AquaPort 案例與營運觀察。不轉售、不打擾，可隨時退訂。</span>
+          <span class="lang-jp">月 1 回、台日調達相場・AquaPort 事例・経営観察をまとめてお届け。第三者提供なし、いつでも配信停止可能。</span>
+        </p>
+        <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('訂閱已送出（範例）');">
+          <input type="email" required placeholder="your@email.com"
+                 class="flex-1 px-4 py-3 border border-hk rounded-full bg-white focus:outline-none focus:border-hk-primary focus:ring-2 focus:ring-hk-primary/20 text-sm" />
+          <button type="submit" class="hk-btn-primary justify-center !rounded-full">
+            <span class="lang-tw">訂閱電子報</span><span class="lang-jp">登録する</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="bg-hk-heading text-white/80">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-4">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded bg-hk-primary flex items-center justify-center text-white font-extrabold">北</div>
+              <div>
+                <div class="text-white font-bold"><span class="lang-tw">台灣北菱股份有限公司</span><span class="lang-jp">台湾北菱股份有限公司</span></div>
+                <div class="text-[10px] tracking-[0.2em] text-hk-accent font-semibold">TAIWAN HOKURYO CO., LTD.</div>
+              </div>
+            </div>
+            <p class="text-sm leading-relaxed text-white/60 mb-5">
+              <span class="lang-tw">連接台日的專業橋樑。1997 年成立，北菱電興株式會社 100% 獨資子公司。</span>
+              <span class="lang-jp">日台ビジネスを繋ぐ専門ブリッジ。1997 年設立、北菱電興株式会社 100% 出資子会社。</span>
+            </p>
+            <div class="text-[10px] tracking-[0.3em] text-hk-accent">[ Hello, World! ] Try the next.</div>
+          </div>
+
+          <div class="lg:col-span-3">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">服務項目</span><span class="lang-jp">サービス</span></h5>
+            <ul class="space-y-3 text-sm">
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">海外採購代行</span><span class="lang-jp">海外調達代行</span></a></li>
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">業務代行・人員代理</span><span class="lang-jp">業務代行・人員代行</span></a></li>
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">進出口通關・保稅倉</span><span class="lang-jp">輸出入通関・保税倉庫</span></a></li>
+              <li><a href="products.html#aquaport"   class="hover:text-hk-accent transition">AquaPort</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-2">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">導覽</span><span class="lang-jp">ナビゲーション</span></h5>
+            <ul class="space-y-3 text-sm">
+              <li><a href="about.html"   class="hover:text-hk-accent transition"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a></li>
+              <li><a href="products.html" class="hover:text-hk-accent transition"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a></li>
+              <li><a href="blog.html"     class="hover:text-hk-accent transition"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a></li>
+              <li><a href="contact.html"  class="hover:text-hk-accent transition"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-3">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">聯絡資訊</span><span class="lang-jp">お問い合わせ</span></h5>
+            <ul class="space-y-3 text-sm leading-relaxed">
+              <li>
+                <span class="lang-tw">台北市敦化南路 1 段 205 號<br>國際貿易大樓 (ITB) 16F 1602</span>
+                <span class="lang-jp">台北市敦化南路 1 段 205 号<br>国際貿易ビル (ITB) 16F 1602</span>
+              </li>
+              <li><a href="tel:+886227517084" class="hover:text-hk-accent transition">TEL: 02-2751-7084</a></li>
+              <li><a href="mailto:info@hokuryo.com.tw" class="hover:text-hk-accent transition">info@hokuryo.com.tw</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/50">
+          <div>© 1997 - 2026 TAIWAN HOKURYO CO., LTD. All rights reserved.</div>
+          <div>
+            <span class="lang-tw">北菱電興株式会社 100% 獨資子公司</span>
+            <span class="lang-jp">北菱電興株式会社 100% 出資子会社</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* Blog 列表頁專用：分類篩選 + 關鍵字搜尋 */
+    (function () {
+      const tabs   = document.querySelectorAll('[data-filter-group] [data-filter]');
+      const cards  = document.querySelectorAll('[data-article-grid] .hk-article-card');
+      const search = document.querySelector('[data-blog-search]');
+      const empty  = document.querySelector('[data-empty]');
+      const grid   = document.querySelector('[data-article-grid]');
+
+      let currentFilter = 'all';
+      let currentQuery  = '';
+
+      const placeholderTW = '搜尋文章標題或關鍵字…';
+      const placeholderJP = '記事を検索…';
+      const updateSearchPlaceholder = () => {
+        if (!search) return;
+        const isJP = document.documentElement.getAttribute('lang') === 'ja';
+        search.placeholder = isJP ? placeholderJP : placeholderTW;
+      };
+      updateSearchPlaceholder();
+
+      const apply = () => {
+        let visible = 0;
+        cards.forEach(card => {
+          const cat = card.dataset.cat;
+          const txt = (card.textContent + ' ' + (card.dataset.keywords||'')).toLowerCase();
+          const matchCat = currentFilter === 'all' || cat === currentFilter;
+          const matchQuery = !currentQuery || txt.includes(currentQuery);
+          const ok = matchCat && matchQuery;
+          card.classList.toggle('is-hidden', !ok);
+          if (ok) visible++;
+        });
+        if (empty) empty.classList.toggle('hidden', visible !== 0);
+        if (grid)  grid.classList.toggle('hidden', visible === 0);
+      };
+
+      tabs.forEach(t => t.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        t.classList.add('active');
+        currentFilter = t.dataset.filter;
+        apply();
+      }));
+      if (search) search.addEventListener('input', e => {
+        currentQuery = e.target.value.trim().toLowerCase();
+        apply();
+      });
+
+      // 語言切換時更新 placeholder
+      document.querySelectorAll('[data-lang-btn]').forEach(b =>
+        b.addEventListener('click', () => setTimeout(updateSearchPlaceholder, 0))
+      );
+    })();
+  </script>
+</body>
+</html>

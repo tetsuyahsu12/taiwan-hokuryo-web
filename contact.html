@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>聯絡我們｜台灣北菱股份有限公司｜業務代行・AquaPort 詢價</title>
+  <meta name="description" content="聯絡台灣北菱股份有限公司。地址：台北市敦化南路 1 段 205 號國際貿易大樓 (ITB) 16F 1602。電話 02-2751-7084。歡迎洽詢業務代行、海外採購、AquaPort 自動給水系統。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hk: {
+              primary:'#2C76A8', dark:'#24618B', accent:'#FBA505', accentLight:'#FCB32A',
+              text:'#7A7A7A', heading:'#393939', border:'#DDDDDD',
+              soft:'#FAFBFC', section:'#F9F9F9'
+            }
+          },
+          fontFamily: {
+            sans: ['Noto Sans TC', 'Noto Sans JP', 'Inter', 'sans-serif'],
+            display: ['Inter', 'Noto Sans JP', 'Noto Sans TC', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    /* 表單專用樣式 */
+    .hk-input, .hk-select, .hk-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--hk-border);
+      border-radius: 6px;
+      background-color: #fff;
+      font-size: 0.95rem;
+      color: var(--hk-heading);
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .hk-input:focus, .hk-select:focus, .hk-textarea:focus {
+      outline: none;
+      border-color: var(--hk-primary);
+      box-shadow: 0 0 0 3px rgba(44,118,168,0.12);
+    }
+    .hk-textarea { resize: vertical; min-height: 140px; }
+    .hk-label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--hk-heading);
+      margin-bottom: 0.5rem;
+    }
+    .hk-required { color: var(--hk-accent); margin-left: 4px; }
+    .hk-checkbox {
+      width: 18px; height: 18px;
+      accent-color: var(--hk-primary);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-hk-text">
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header data-header class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-hk">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="flex items-center justify-between h-[72px]">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded bg-hk-primary flex items-center justify-center text-white font-display font-extrabold text-lg">北</div>
+          <div class="leading-tight">
+            <div class="text-[15px] font-bold text-hk-heading"><span class="lang-tw">台灣北菱</span><span class="lang-jp">台湾北菱</span></div>
+            <div class="text-[10px] tracking-[0.2em] text-hk-primary font-semibold">TAIWAN HOKURYO</div>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html"    class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+          <a href="about.html"    class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a>
+          <a href="products.html" class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a>
+          <a href="blog.html"     class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a>
+          <a href="contact.html"  class="text-sm font-semibold text-hk-primary"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <div class="hk-lang-switch" role="group" aria-label="Language switcher">
+            <button data-lang-btn="tw" class="active">中文</button>
+            <button data-lang-btn="jp">日本語</button>
+          </div>
+          <a href="#contact-form" class="hidden md:inline-flex hk-btn-primary text-sm">
+            <span class="lang-tw">立即填寫表單</span><span class="lang-jp">フォームへ</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <button data-menu-toggle class="lg:hidden p-2 text-hk-heading" aria-expanded="false" aria-label="Open menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav data-mobile-nav class="hk-mobile-nav lg:hidden fixed top-[72px] right-0 bottom-0 w-full sm:w-[320px] bg-white border-l border-hk px-6 py-8 space-y-1 shadow-2xl">
+      <a href="index.html"    class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+      <a href="about.html"    class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a>
+      <a href="products.html" class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a>
+      <a href="blog.html"     class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a>
+      <a href="contact.html"  class="block py-3 text-base font-semibold text-hk-primary border-b border-hk"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a>
+    </nav>
+  </header>
+
+
+  <main class="pt-[72px]">
+
+    <!-- ============================================================
+         PAGE HERO
+         ============================================================ -->
+    <section class="hk-hero-bg relative overflow-hidden">
+      <div class="absolute inset-0 hk-grid-pattern opacity-50"></div>
+      <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-24">
+        <nav class="flex items-center gap-2 text-xs text-hk-text mb-8">
+          <a href="index.html" class="hover:text-hk-primary"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+          <span>/</span>
+          <span class="text-hk-heading font-medium"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></span>
+        </nav>
+
+        <span class="hk-eyebrow mb-4">CONTACT US</span>
+        <h1 class="font-display font-extrabold text-hk-heading text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mt-4 mb-6 max-w-4xl">
+          <span class="lang-tw">告訴我們您的需求，<br>由 25 年經驗團隊回覆。</span>
+          <span class="lang-jp">お悩み・ご要望をお聞かせください。<br>25 年の経験チームがお答えします。</span>
+        </h1>
+        <p class="text-lg text-hk-heading max-w-3xl leading-relaxed">
+          <span class="lang-tw">無論是業務代行與採購諮詢、AquaPort 產品詢價合作，或其他事項，我們會盡快與您聯繫。</span>
+          <span class="lang-jp">業務代行・調達のご相談、AquaPort のお見積り・代理店ご相談、その他のお問い合わせ、お気軽にどうぞ。</span>
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CONTACT INFO CARDS
+         ============================================================ -->
+    <section class="py-16 lg:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 hk-reveal">
+
+          <!-- Address -->
+          <div class="hk-card p-7 text-center">
+            <div class="w-14 h-14 rounded-full bg-hk-primary/10 text-hk-primary mx-auto mb-4 flex items-center justify-center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 2 5 5 5 9c0 5.5 7 13 7 13s7-7.5 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <h3 class="font-bold text-hk-heading text-base mb-2">
+              <span class="lang-tw">公司地址</span><span class="lang-jp">所在地</span>
+            </h3>
+            <p class="text-sm leading-relaxed">
+              <span class="lang-tw">台北市敦化南路 1 段 205 號<br>國際貿易大樓 (ITB)<br>16F 1602 室</span>
+              <span class="lang-jp">台北市敦化南路 1 段 205 号<br>国際貿易ビル (ITB)<br>16F 1602 室</span>
+            </p>
+          </div>
+
+          <!-- Phone -->
+          <div class="hk-card p-7 text-center">
+            <div class="w-14 h-14 rounded-full bg-hk-primary/10 text-hk-primary mx-auto mb-4 flex items-center justify-center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <h3 class="font-bold text-hk-heading text-base mb-2">
+              <span class="lang-tw">電話 / 傳真</span><span class="lang-jp">電話 / FAX</span>
+            </h3>
+            <p class="text-sm leading-relaxed">
+              <a href="tel:+886227517084" class="hover:text-hk-primary block">TEL: 02-2751-7084</a>
+              <span class="text-hk-text">FAX: 02-2752-7541</span>
+              <span class="block text-xs text-hk-text mt-2">
+                <span class="lang-tw">週一至週五 09:00-18:00</span>
+                <span class="lang-jp">月～金 09:00-18:00</span>
+              </span>
+            </p>
+          </div>
+
+          <!-- Email -->
+          <div class="hk-card p-7 text-center">
+            <div class="w-14 h-14 rounded-full bg-hk-primary/10 text-hk-primary mx-auto mb-4 flex items-center justify-center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </div>
+            <h3 class="font-bold text-hk-heading text-base mb-2">
+              <span class="lang-tw">電子郵件</span><span class="lang-jp">メール</span>
+            </h3>
+            <p class="text-sm leading-relaxed">
+              <a href="mailto:info@hokuryo.com.tw" class="hover:text-hk-primary text-hk-primary font-semibold break-all">info@hokuryo.com.tw</a>
+              <span class="block text-xs text-hk-text mt-2">
+                <span class="lang-tw">24 小時內回覆</span>
+                <span class="lang-jp">24 時間以内に返信</span>
+              </span>
+            </p>
+          </div>
+
+          <!-- Web -->
+          <div class="hk-card p-7 text-center bg-hk-primary text-white border-hk-primary">
+            <div class="w-14 h-14 rounded-full bg-white/15 text-white mx-auto mb-4 flex items-center justify-center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+            </div>
+            <h3 class="font-bold text-white text-base mb-2">
+              <span class="lang-tw">官方網站</span><span class="lang-jp">公式サイト</span>
+            </h3>
+            <p class="text-sm leading-relaxed text-white/90">
+              <a href="https://hokuryo.com.tw" class="hover:text-hk-accent font-semibold break-all">hokuryo.com.tw</a>
+              <span class="block text-xs text-white/70 mt-2">
+                <span class="lang-tw">線上隨時了解最新動態</span>
+                <span class="lang-jp">最新情報をオンラインで</span>
+              </span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CONTACT FORM + SIDE INFO
+         ============================================================ -->
+    <section id="contact-form" class="py-16 lg:py-24 bg-hk-soft scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="grid lg:grid-cols-12 gap-10">
+
+          <!-- LEFT — Sidebar info -->
+          <aside class="lg:col-span-4 hk-reveal">
+            <span class="hk-eyebrow mb-4">SAY HELLO</span>
+            <h2 class="hk-h-decorated font-display text-3xl lg:text-4xl text-hk-heading mt-4 mb-6">
+              <span class="lang-tw">歡迎您隨時<br>諮詢與聯絡</span>
+              <span class="lang-jp">いつでもお気軽に<br>ご相談ください</span>
+            </h2>
+
+            <p class="text-base leading-relaxed mb-8">
+              <span class="lang-tw">填寫右側表單，我們將於 1～2 個工作天內由負責窗口聯繫您。緊急事項請直接撥打公司電話。</span>
+              <span class="lang-jp">右のフォームをご入力いただければ、1～2 営業日内に担当者よりご連絡いたします。お急ぎの場合は直接お電話にてお問い合わせください。</span>
+            </p>
+
+            <ul class="space-y-4 text-sm">
+              <li class="flex gap-3">
+                <span class="text-hk-accent shrink-0 mt-0.5">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+                <span><span class="lang-tw">業務代行與全球採購</span><span class="lang-jp">業務代行・グローバル調達</span></span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-hk-accent shrink-0 mt-0.5">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+                <span><span class="lang-tw">AquaPort 自動給水系統詢價</span><span class="lang-jp">AquaPort 自動給水システム見積り</span></span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-hk-accent shrink-0 mt-0.5">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+                <span><span class="lang-tw">人員代理／虛擬辦公室</span><span class="lang-jp">人員代行／バーチャルオフィス</span></span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-hk-accent shrink-0 mt-0.5">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                </span>
+                <span><span class="lang-tw">進出口通關／保稅倉儲</span><span class="lang-jp">輸出入通関／保税倉庫</span></span>
+              </li>
+            </ul>
+
+            <div class="mt-10 p-6 bg-white border border-hk rounded-xl">
+              <div class="text-xs tracking-[0.2em] font-bold text-hk-primary mb-3">DIRECT CONTACT</div>
+              <a href="tel:+886227517084" class="block text-2xl font-extrabold text-hk-heading mb-1">02-2751-7084</a>
+              <a href="mailto:info@hokuryo.com.tw" class="block text-sm text-hk-primary hover:underline">info@hokuryo.com.tw</a>
+            </div>
+          </aside>
+
+
+          <!-- RIGHT — Form -->
+          <div class="lg:col-span-8 hk-reveal">
+            <form data-contact-form class="bg-white border border-hk rounded-2xl p-8 lg:p-10 space-y-6 shadow-sm">
+
+              <!-- 詢問主題（下拉式）— 重點欄位 -->
+              <div>
+                <label for="topic" class="hk-label">
+                  <span class="lang-tw">詢問主題</span><span class="lang-jp">お問い合わせ項目</span>
+                  <span class="hk-required">*</span>
+                </label>
+                <select id="topic" name="topic" required class="hk-select">
+                  <option value="" data-i18n-tw="請選擇詢問主題" data-i18n-jp="お選びください">
+                    <span class="lang-tw">─ 請選擇詢問主題 ─</span>
+                  </option>
+                  <option value="procurement">
+                    <span class="lang-tw">1. 業務代行與採購諮詢</span>
+                  </option>
+                  <option value="aquaport">
+                    <span class="lang-tw">2. AquaPort 產品詢價與合作</span>
+                  </option>
+                  <option value="other">
+                    <span class="lang-tw">3. 其他事項</span>
+                  </option>
+                </select>
+                <p class="mt-2 text-xs text-hk-text">
+                  <span class="lang-tw">請選擇最接近您需求的主題，由相關窗口專員回覆。</span>
+                  <span class="lang-jp">最も近いお問い合わせ項目を選択ください。担当窓口よりご返信いたします。</span>
+                </p>
+              </div>
+
+              <!-- 姓名 / 公司名稱 -->
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="name" class="hk-label">
+                    <span class="lang-tw">姓名</span><span class="lang-jp">お名前</span>
+                    <span class="hk-required">*</span>
+                  </label>
+                  <input type="text" id="name" name="name" required class="hk-input" autocomplete="name" />
+                </div>
+                <div>
+                  <label for="company" class="hk-label">
+                    <span class="lang-tw">公司名稱</span><span class="lang-jp">会社名</span>
+                  </label>
+                  <input type="text" id="company" name="company" class="hk-input" autocomplete="organization" />
+                </div>
+              </div>
+
+              <!-- 職稱 / 國家 -->
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="title" class="hk-label">
+                    <span class="lang-tw">職稱</span><span class="lang-jp">役職</span>
+                  </label>
+                  <input type="text" id="title" name="title" class="hk-input" />
+                </div>
+                <div>
+                  <label for="country" class="hk-label">
+                    <span class="lang-tw">所在國家／地區</span><span class="lang-jp">国／地域</span>
+                  </label>
+                  <select id="country" name="country" class="hk-select">
+                    <option value=""><span class="lang-tw">─ 請選擇 ─</span></option>
+                    <option value="JP"><span class="lang-tw">日本</span></option>
+                    <option value="TW" selected><span class="lang-tw">台灣</span></option>
+                    <option value="CN"><span class="lang-tw">中國大陸</span></option>
+                    <option value="HK"><span class="lang-tw">香港</span></option>
+                    <option value="OTHER"><span class="lang-tw">其他</span></option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- E-mail / Phone -->
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="email" class="hk-label">
+                    <span class="lang-tw">電子郵件</span><span class="lang-jp">メール</span>
+                    <span class="hk-required">*</span>
+                  </label>
+                  <input type="email" id="email" name="email" required class="hk-input" autocomplete="email" />
+                </div>
+                <div>
+                  <label for="phone" class="hk-label">
+                    <span class="lang-tw">聯絡電話</span><span class="lang-jp">電話番号</span>
+                  </label>
+                  <input type="tel" id="phone" name="phone" class="hk-input" autocomplete="tel" />
+                </div>
+              </div>
+
+              <!-- 詢問內容 -->
+              <div>
+                <label for="message" class="hk-label">
+                  <span class="lang-tw">詢問內容</span><span class="lang-jp">お問い合わせ内容</span>
+                  <span class="hk-required">*</span>
+                </label>
+                <textarea id="message" name="message" required class="hk-textarea"
+                  placeholder="請簡述您的需求、預計合作項目、時程或預算範圍。AquaPort 詢價請註明預計數量與用途。"></textarea>
+              </div>
+
+              <!-- 偏好回覆方式 -->
+              <fieldset>
+                <legend class="hk-label">
+                  <span class="lang-tw">偏好回覆方式</span><span class="lang-jp">ご希望の返信方法</span>
+                </legend>
+                <div class="flex flex-wrap gap-5 mt-1">
+                  <label class="inline-flex items-center gap-2 text-sm text-hk-heading cursor-pointer">
+                    <input type="radio" name="reply_method" value="email" checked class="hk-checkbox" />
+                    <span class="lang-tw">電子郵件</span><span class="lang-jp">メール</span>
+                  </label>
+                  <label class="inline-flex items-center gap-2 text-sm text-hk-heading cursor-pointer">
+                    <input type="radio" name="reply_method" value="phone" class="hk-checkbox" />
+                    <span class="lang-tw">電話聯絡</span><span class="lang-jp">電話</span>
+                  </label>
+                  <label class="inline-flex items-center gap-2 text-sm text-hk-heading cursor-pointer">
+                    <input type="radio" name="reply_method" value="any" class="hk-checkbox" />
+                    <span class="lang-tw">皆可</span><span class="lang-jp">どちらでも</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- 隱私同意 -->
+              <label class="flex items-start gap-3 text-sm text-hk-heading cursor-pointer">
+                <input type="checkbox" required class="hk-checkbox mt-1" />
+                <span class="leading-relaxed">
+                  <span class="lang-tw">我已閱讀並同意，本表單僅用於回覆本次諮詢，台灣北菱不會將資料用於其他用途或揭露給第三方。</span>
+                  <span class="lang-jp">本フォーム送信内容は本件のご返信のみに使用され、第三者への開示はいたしません。</span>
+                </span>
+              </label>
+
+              <!-- 送出 -->
+              <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                <button type="submit" class="hk-btn-primary justify-center w-full sm:w-auto">
+                  <span class="lang-tw">送出表單</span><span class="lang-jp">送信する</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </button>
+                <button type="reset" class="hk-btn-ghost justify-center w-full sm:w-auto">
+                  <span class="lang-tw">清除重填</span><span class="lang-jp">リセット</span>
+                </button>
+              </div>
+
+              <p class="text-xs text-hk-text pt-2 border-t border-hk">
+                <span class="lang-tw">＊本頁表單為前端示範。實際整合 WordPress 後將串接 Contact Form 7 / WPForms / 自架 SMTP，自動寄送通知至 info@hokuryo.com.tw。</span>
+                <span class="lang-jp">＊本フォームはフロントデモです。WordPress 統合時は Contact Form 7 / WPForms 等を介して info@hokuryo.com.tw へ自動送信されます。</span>
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         MAP SECTION
+         ============================================================ -->
+    <section class="py-16 lg:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="grid lg:grid-cols-12 gap-10 items-start mb-10">
+          <div class="lg:col-span-5 hk-reveal">
+            <span class="hk-eyebrow mb-4">FIND US</span>
+            <h2 class="hk-h-decorated font-display text-3xl lg:text-4xl text-hk-heading mt-4 mb-6">
+              <span class="lang-tw">我們的位置</span>
+              <span class="lang-jp">アクセス</span>
+            </h2>
+            <p class="text-base leading-relaxed mb-6">
+              <span class="lang-tw">辦公室位於敦化南路一段「國際貿易大樓 (ITB)」16 樓 1602 室。鄰近捷運忠孝復興站、台北小巨蛋商圈，交通便利。</span>
+              <span class="lang-jp">オフィスは敦化南路 1 段「国際貿易ビル (ITB)」16F 1602 号室。MRT 忠孝復興駅、台北アリーナ商圏に近く、アクセス良好です。</span>
+            </p>
+
+            <ul class="space-y-3 text-sm">
+              <li class="flex gap-3">
+                <span class="text-hk-accent font-bold shrink-0">MRT</span>
+                <span><span class="lang-tw">忠孝復興站 1 號出口，步行約 8 分鐘</span><span class="lang-jp">忠孝復興駅 1 番出口、徒歩約 8 分</span></span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-hk-accent font-bold shrink-0">BUS</span>
+                <span><span class="lang-tw">敦化南路 1 段／市民大道路口站</span><span class="lang-jp">敦化南路 1 段／市民大道交差点バス停</span></span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-hk-accent font-bold shrink-0">CAR</span>
+                <span><span class="lang-tw">大樓地下停車場（B1～B3）</span><span class="lang-jp">ビル地下駐車場（B1～B3）</span></span>
+              </li>
+            </ul>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=台北市敦化南路1段205號" target="_blank" rel="noopener"
+               class="hk-btn-ghost mt-8 inline-flex">
+              <span class="lang-tw">在 Google Map 開啟</span><span class="lang-jp">Google Maps で開く</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+
+          <div class="lg:col-span-7 hk-reveal">
+            <div class="rounded-2xl overflow-hidden border border-hk shadow-sm">
+              <iframe
+                src="https://www.google.com/maps?q=台北市敦化南路1段205號國際貿易大樓&output=embed"
+                width="100%" height="450" style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="台灣北菱地圖位置">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FAQ — 常見問題
+         ============================================================ -->
+    <section class="py-16 lg:py-24 bg-hk-section">
+      <div class="max-w-5xl mx-auto px-5 lg:px-8">
+
+        <div class="text-center mb-12 hk-reveal">
+          <span class="hk-eyebrow justify-center">FAQ</span>
+          <h2 class="hk-h-decorated text-center font-display text-3xl lg:text-4xl text-hk-heading mt-4 mb-4">
+            <span class="lang-tw">常見問題</span>
+            <span class="lang-jp">よくあるご質問</span>
+          </h2>
+        </div>
+
+        <div class="space-y-4 hk-reveal">
+          <details class="group bg-white border border-hk rounded-xl">
+            <summary class="cursor-pointer p-6 flex items-center justify-between text-hk-heading font-bold list-none">
+              <span><span class="lang-tw">Q1. 我不在台灣，可以委託採購嗎？</span><span class="lang-jp">Q1. 海外からも調達依頼は可能ですか？</span></span>
+              <svg class="w-5 h-5 text-hk-primary group-open:rotate-180 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-sm leading-relaxed">
+              <span class="lang-tw">當然可以。我們的核心業務即為協助海外（特別是日本）企業在台灣／中國採購零件、商品或進行業務代行。歡迎透過表單或電子郵件聯繫我們，會由專員了解您的需求後提案。</span>
+              <span class="lang-jp">もちろん可能です。海外（特に日本）企業の台湾・中国における部品調達・商品調達・業務代行こそが弊社の中核事業です。フォームまたはメールよりご連絡ください、担当者よりヒアリングのうえご提案いたします。</span>
+            </div>
+          </details>
+
+          <details class="group bg-white border border-hk rounded-xl">
+            <summary class="cursor-pointer p-6 flex items-center justify-between text-hk-heading font-bold list-none">
+              <span><span class="lang-tw">Q2. AquaPort 是否提供現場示範？</span><span class="lang-jp">Q2. AquaPort の現地デモは可能ですか？</span></span>
+              <svg class="w-5 h-5 text-hk-primary group-open:rotate-180 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-sm leading-relaxed">
+              <span class="lang-tw">針對農會、合作社、農機通路或大型農場，台灣北菱（總代理）可安排現地說明與安裝示範。請透過表單選擇「AquaPort 產品詢價與合作」並留下預計安裝地點與面積，我們會與您聯絡。</span>
+              <span class="lang-jp">農協、組合、農機販売店、大規模農場様向けに、台湾北菱（総代理店）が現地説明・設置デモを手配可能です。フォームで「AquaPort お見積り・代理店」を選択のうえ、設置予定場所・面積をご記入ください。</span>
+            </div>
+          </details>
+
+          <details class="group bg-white border border-hk rounded-xl">
+            <summary class="cursor-pointer p-6 flex items-center justify-between text-hk-heading font-bold list-none">
+              <span><span class="lang-tw">Q3. 業務代行的服務費用如何計算？</span><span class="lang-jp">Q3. 業務代行の費用はどのように決まりますか？</span></span>
+              <svg class="w-5 h-5 text-hk-primary group-open:rotate-180 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-sm leading-relaxed">
+              <span class="lang-tw">依您所需的代行範圍、頻次、是否含倉儲與通關等而異。我們可提供月費制、案件制或混合方案，建議先透過表單描述需求，我們將回覆客製化報價。</span>
+              <span class="lang-jp">代行範囲、頻度、倉庫・通関業務の有無等により異なります。月額制・案件別・併用プランをご用意しており、フォームよりニーズをお知らせいただければカスタムお見積りをご返信いたします。</span>
+            </div>
+          </details>
+
+          <details class="group bg-white border border-hk rounded-xl">
+            <summary class="cursor-pointer p-6 flex items-center justify-between text-hk-heading font-bold list-none">
+              <span><span class="lang-tw">Q4. 我是中小企業，也可以委託代行嗎？</span><span class="lang-jp">Q4. 中小企業でも業務代行は依頼できますか？</span></span>
+              <svg class="w-5 h-5 text-hk-primary group-open:rotate-180 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-sm leading-relaxed">
+              <span class="lang-tw">非常歡迎。事實上，我們的服務正是為了協助無法負擔在台設立完整分公司的中小型日系企業而設計。我們提供月費制、案件制、混合制等多種彈性方案，可從單次採購、產假補位等小規模合作開始，逐步擴大至虛擬辦公室／在地分公司等級的長期合作。</span>
+              <span class="lang-jp">大歓迎です。弊社のサービスは、台湾現地法人の完全設立が難しい中小規模の日系企業を支援するために設計されています。月額制、案件別、ハイブリッド型など柔軟なプランをご用意しており、単発調達や産休カバー等の小規模スタートから、バーチャルオフィス／現地拠点運営級の長期パートナーシップまで段階的に拡張可能です。</span>
+            </div>
+          </details>
+
+          <details class="group bg-white border border-hk rounded-xl">
+            <summary class="cursor-pointer p-6 flex items-center justify-between text-hk-heading font-bold list-none">
+              <span><span class="lang-tw">Q5. 與貴公司溝通可以使用日文嗎？</span><span class="lang-jp">Q5. 日本語でやり取りできますか？</span></span>
+              <svg class="w-5 h-5 text-hk-primary group-open:rotate-180 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-sm leading-relaxed">
+              <span class="lang-tw">當然可以。台灣北菱的董事總經理為日籍駐外人員，團隊熟悉日本商業慣例，日常以中文／日文雙軌進行業務溝通與報告。郵件、電話、視訊會議皆可全程以日文對應，請放心。</span>
+              <span class="lang-jp">もちろん可能です。台湾北菱の取締役社長は日本人駐在員、チームは日本のビジネス慣習に精通しており、中国語・日本語のバイリンガル体制で業務遂行・報告を行っております。メール、電話、ビデオ会議すべて日本語で対応可能です。</span>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="bg-hk-heading text-white/80">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-4">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded bg-hk-primary flex items-center justify-center text-white font-extrabold">北</div>
+              <div>
+                <div class="text-white font-bold"><span class="lang-tw">台灣北菱股份有限公司</span><span class="lang-jp">台湾北菱股份有限公司</span></div>
+                <div class="text-[10px] tracking-[0.2em] text-hk-accent font-semibold">TAIWAN HOKURYO CO., LTD.</div>
+              </div>
+            </div>
+            <p class="text-sm leading-relaxed text-white/60 mb-5">
+              <span class="lang-tw">連接台日的專業橋樑。1997 年成立，北菱電興株式會社 100% 獨資子公司。</span>
+              <span class="lang-jp">日台ビジネスを繋ぐ専門ブリッジ。1997 年設立、北菱電興株式会社 100% 出資子会社。</span>
+            </p>
+            <div class="text-[10px] tracking-[0.3em] text-hk-accent">[ Hello, World! ] Try the next.</div>
+          </div>
+
+          <div class="lg:col-span-3">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">服務項目</span><span class="lang-jp">サービス</span></h5>
+            <ul class="space-y-3 text-sm">
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">海外採購代行</span><span class="lang-jp">海外調達代行</span></a></li>
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">業務代行・人員代理</span><span class="lang-jp">業務代行・人員代行</span></a></li>
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">進出口通關・保稅倉</span><span class="lang-jp">輸出入通関・保税倉庫</span></a></li>
+              <li><a href="products.html#aquaport"   class="hover:text-hk-accent transition">AquaPort</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-2">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">導覽</span><span class="lang-jp">ナビゲーション</span></h5>
+            <ul class="space-y-3 text-sm">
+              <li><a href="about.html"   class="hover:text-hk-accent transition"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a></li>
+              <li><a href="products.html" class="hover:text-hk-accent transition"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a></li>
+              <li><a href="blog.html"     class="hover:text-hk-accent transition"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a></li>
+              <li><a href="contact.html"  class="hover:text-hk-accent transition"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-3">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">聯絡資訊</span><span class="lang-jp">お問い合わせ</span></h5>
+            <ul class="space-y-3 text-sm leading-relaxed">
+              <li>
+                <span class="lang-tw">台北市敦化南路 1 段 205 號<br>國際貿易大樓 (ITB) 16F 1602</span>
+                <span class="lang-jp">台北市敦化南路 1 段 205 号<br>国際貿易ビル (ITB) 16F 1602</span>
+              </li>
+              <li><a href="tel:+886227517084" class="hover:text-hk-accent transition">TEL: 02-2751-7084</a></li>
+              <li><a href="mailto:info@hokuryo.com.tw" class="hover:text-hk-accent transition">info@hokuryo.com.tw</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/50">
+          <div>© 1997 - 2026 TAIWAN HOKURYO CO., LTD. All rights reserved.</div>
+          <div>
+            <span class="lang-tw">北菱電興株式会社 100% 獨資子公司</span>
+            <span class="lang-jp">北菱電興株式会社 100% 出資子会社</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // 從 URL query 參數預選詢問主題（從產品頁 CTA 跳來時自動帶入）
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const topic = params.get('topic');
+      if (topic) {
+        const select = document.getElementById('topic');
+        if (select) select.value = topic;
+        // 滾動至表單
+        const form = document.getElementById('contact-form');
+        if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    })();
+  </script>
+</body>
+</html>

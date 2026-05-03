@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>關於我們｜台灣北菱股份有限公司｜25 年深耕台日商務</title>
+  <meta name="description" content="台灣北菱股份有限公司（TAIWAN HOKURYO）成立於 1997 年，為北菱電興株式會社 100% 獨資子公司。深耕台日商務 25 年以上，致力於海外採購代行與 AquaPort 自動給水系統台灣總代理業務。" />
+  <meta name="keywords" content="台灣北菱,Taiwan Hokuryo,公司簡介,北菱電興,日系企業,經營方針,董事" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hk: {
+              primary:'#2C76A8', dark:'#24618B', accent:'#FBA505', accentLight:'#FCB32A',
+              text:'#7A7A7A', heading:'#393939', border:'#DDDDDD',
+              soft:'#FAFBFC', section:'#F9F9F9'
+            }
+          },
+          fontFamily: {
+            sans: ['Noto Sans TC', 'Noto Sans JP', 'Inter', 'sans-serif'],
+            display: ['Inter', 'Noto Sans JP', 'Noto Sans TC', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-white text-hk-text">
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header data-header class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-hk">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="flex items-center justify-between h-[72px]">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded bg-hk-primary flex items-center justify-center text-white font-display font-extrabold text-lg">北</div>
+          <div class="leading-tight">
+            <div class="text-[15px] font-bold text-hk-heading"><span class="lang-tw">台灣北菱</span><span class="lang-jp">台湾北菱</span></div>
+            <div class="text-[10px] tracking-[0.2em] text-hk-primary font-semibold">TAIWAN HOKURYO</div>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html"    class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+          <a href="about.html"    class="text-sm font-semibold text-hk-primary"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a>
+          <a href="products.html" class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a>
+          <a href="blog.html"     class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a>
+          <a href="contact.html"  class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <div class="hk-lang-switch" role="group" aria-label="Language switcher">
+            <button data-lang-btn="tw" class="active">中文</button>
+            <button data-lang-btn="jp">日本語</button>
+          </div>
+          <a href="contact.html" class="hidden md:inline-flex hk-btn-primary text-sm">
+            <span class="lang-tw">聯絡諮詢</span><span class="lang-jp">お問合せ</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <button data-menu-toggle class="lg:hidden p-2 text-hk-heading" aria-expanded="false" aria-label="Open menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav data-mobile-nav class="hk-mobile-nav lg:hidden fixed top-[72px] right-0 bottom-0 w-full sm:w-[320px] bg-white border-l border-hk px-6 py-8 space-y-1 shadow-2xl">
+      <a href="index.html"    class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+      <a href="about.html"    class="block py-3 text-base font-semibold text-hk-primary border-b border-hk"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a>
+      <a href="products.html" class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a>
+      <a href="blog.html"     class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a>
+      <a href="contact.html"  class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a>
+      <a href="contact.html"  class="hk-btn-primary mt-6 w-full justify-center"><span class="lang-tw">聯絡諮詢</span><span class="lang-jp">お問合せ</span></a>
+    </nav>
+  </header>
+
+
+  <main class="pt-[72px]">
+
+    <!-- ============================================================
+         PAGE HERO
+         ============================================================ -->
+    <section class="hk-hero-bg relative overflow-hidden">
+      <div class="absolute inset-0 hk-grid-pattern opacity-50"></div>
+      <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-24">
+        <nav class="flex items-center gap-2 text-xs text-hk-text mb-8">
+          <a href="index.html" class="hover:text-hk-primary"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+          <span>/</span>
+          <span class="text-hk-heading font-medium"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></span>
+        </nav>
+
+        <span class="hk-eyebrow mb-4">ABOUT TAIWAN HOKURYO</span>
+        <h1 class="font-display font-extrabold text-hk-heading text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mt-4 mb-6 max-w-4xl">
+          <span class="lang-tw">深耕台日商務 25 年，<br>值得信賴的在地夥伴。</span>
+          <span class="lang-jp">日台ビジネス 25 年。<br>信頼される現地パートナー。</span>
+        </h1>
+        <p class="text-lg text-hk-heading max-w-3xl leading-relaxed">
+          <span class="lang-tw">台灣北菱（TAIWAN HOKURYO）成立於 1997 年，是<strong class="text-hk-primary">北菱電興株式會社 100% 獨資</strong>的台灣在地子公司。我們將日系品質精神與台灣商務彈性融合，為日系企業在台灣／中國的採購、業務代行與智慧農業產品代理提供完整解決方案。</span>
+          <span class="lang-jp">台湾北菱（TAIWAN HOKURYO）は 1997 年設立、<strong class="text-hk-primary">北菱電興株式会社 100% 出資</strong>の台湾現地子会社です。日系品質と台湾の柔軟性を融合し、日系企業の台湾・中国における調達、業務代行、スマート農業製品代理を一括サポートします。</span>
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         BRAND STORY / 品牌故事
+         ============================================================ -->
+    <section class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-12">
+
+        <div class="lg:col-span-5 hk-reveal">
+          <span class="hk-eyebrow mb-4">OUR STORY</span>
+          <h2 class="hk-h-decorated font-display text-3xl lg:text-5xl text-hk-heading mt-4 mb-6">
+            <span class="lang-tw">連接台日的<br>專業橋樑</span>
+            <span class="lang-jp">日台を繋ぐ<br>専門ブリッジ</span>
+          </h2>
+        </div>
+
+        <div class="lg:col-span-7 space-y-5 hk-reveal">
+          <p class="text-base lg:text-lg leading-relaxed text-hk-heading">
+            <span class="lang-tw">自 1997 年成立以來，台灣北菱以「日系品質、在地速度」為信念，協助日本企業跨越語言、文化、商務環境的距離，把台灣與中國的供應鏈轉化為您的競爭優勢。</span>
+            <span class="lang-jp">1997 年の設立以来、「日系品質、現地スピード」を信条に、日系企業が言語・文化・商習慣の壁を越え、台湾・中国のサプライチェーンを競争優位に変える支援をしています。</span>
+          </p>
+          <p class="text-base leading-relaxed">
+            <span class="lang-tw">過去四分之一個世紀，我們累積了 20 年以上的電子零件、機械加工件採購經驗，並深耕台北、新北、桃園、台中、嘉義以及深圳、東莞、廈門、昆山、杭州、北京、南陽等供應鏈據點，建立穩定且具彈性的合作網絡。</span>
+            <span class="lang-jp">この四半世紀で、電子部品・機械加工品の調達実績は 20 年超。台北・新北・桃園・台中・嘉義、ならびに深圳・東莞・厦門・昆山・杭州・北京・南陽など主要拠点に安定かつ柔軟なネットワークを構築しています。</span>
+          </p>
+          <p class="text-base leading-relaxed">
+            <span class="lang-tw">2026 年起，我們聚焦於兩大核心業務：<strong class="text-hk-primary">海外業務代行與全球採購</strong>，以及作為<strong class="text-hk-primary">北菱電興 AquaPort 水田用自動給水系統的台灣總代理</strong>。我們相信，專注，是日系企業最可靠的承諾。</span>
+            <span class="lang-jp">2026 年からは 2 つの中核事業に集中いたします：<strong class="text-hk-primary">海外業務代行とグローバル調達</strong>、そして<strong class="text-hk-primary">北菱電興 AquaPort 水田用自動給水システムの台湾総代理店業務</strong>です。「集中」こそが日系企業として最も信頼できるお約束だと考えています。</span>
+          </p>
+          <div class="pt-4">
+            <span class="text-[10px] tracking-[0.3em] text-hk-accent font-bold">[ Hello, World! ] Try the next.</span>
+            <p class="text-2xl font-display font-extrabold text-hk-heading mt-1">
+              <span class="lang-tw">新しい世界へ踏み出す</span>
+              <span class="lang-jp">新しい世界へ踏み出す</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         MISSION / VISION / VALUE
+         ============================================================ -->
+    <section class="bg-hk-section py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto mb-16 hk-reveal">
+          <span class="hk-eyebrow justify-center">PHILOSOPHY</span>
+          <h2 class="hk-h-decorated text-center font-display text-3xl lg:text-5xl mt-4 mb-6">
+            <span class="lang-tw">使命・願景・價值</span>
+            <span class="lang-jp">ミッション・ビジョン・バリュー</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 hk-reveal">
+
+          <div class="bg-white rounded-2xl p-8 border border-hk relative">
+            <div class="text-hk-accent text-[10px] tracking-[0.3em] font-bold mb-4">MISSION</div>
+            <h3 class="font-display text-2xl text-hk-heading mb-4">
+              <span class="lang-tw">使命</span>
+              <span class="lang-jp">ミッション</span>
+            </h3>
+            <p class="text-sm leading-relaxed">
+              <span class="lang-tw">為日系企業節省在台灣／中國設立法人的固定成本，提供如同自有海外分公司般的彈性、專業、可靠的在地支援。</span>
+              <span class="lang-jp">日系企業の台湾・中国法人設立に伴う固定費を削減し、自社海外支店のような柔軟・専門・信頼性のある現地サポートを提供します。</span>
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 border border-hk relative border-t-4 border-t-hk-primary">
+            <div class="text-hk-primary text-[10px] tracking-[0.3em] font-bold mb-4">VISION</div>
+            <h3 class="font-display text-2xl text-hk-heading mb-4">
+              <span class="lang-tw">願景</span>
+              <span class="lang-jp">ビジョン</span>
+            </h3>
+            <p class="text-sm leading-relaxed">
+              <span class="lang-tw">成為日系企業跨入台灣與中國市場時，第一個浮現腦海的合作夥伴；同時，把 AquaPort 智慧灌溉導入台灣稻作市場。</span>
+              <span class="lang-jp">日系企業が台湾・中国進出を検討する際、真っ先に思い浮かぶパートナーへ。AquaPort スマート灌漑を台湾稲作市場に普及させます。</span>
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 border border-hk relative">
+            <div class="text-hk-accent text-[10px] tracking-[0.3em] font-bold mb-4">VALUE</div>
+            <h3 class="font-display text-2xl text-hk-heading mb-4">
+              <span class="lang-tw">價值</span>
+              <span class="lang-jp">バリュー</span>
+            </h3>
+            <ul class="text-sm leading-relaxed space-y-2">
+              <li class="flex gap-2"><span class="text-hk-accent">▸</span><span><span class="lang-tw">日系品質與細節要求</span><span class="lang-jp">日系品質とディテール</span></span></li>
+              <li class="flex gap-2"><span class="text-hk-accent">▸</span><span><span class="lang-tw">台灣速度與在地彈性</span><span class="lang-jp">台湾スピードと現地の柔軟性</span></span></li>
+              <li class="flex gap-2"><span class="text-hk-accent">▸</span><span><span class="lang-tw">長期關係勝過一次交易</span><span class="lang-jp">長期関係 ＞ 一回限りの取引</span></span></li>
+              <li class="flex gap-2"><span class="text-hk-accent">▸</span><span><span class="lang-tw">透明溝通與專業承諾</span><span class="lang-jp">透明な対話と専門的なコミットメント</span></span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         COMPANY PROFILE / 公司概要
+         ============================================================ -->
+    <section class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="grid lg:grid-cols-12 gap-12 mb-12">
+          <div class="lg:col-span-5 hk-reveal">
+            <span class="hk-eyebrow mb-4">COMPANY PROFILE</span>
+            <h2 class="hk-h-decorated font-display text-3xl lg:text-5xl text-hk-heading mt-4 mb-6">
+              <span class="lang-tw">公司概要</span>
+              <span class="lang-jp">会社概要</span>
+            </h2>
+            <p class="text-sm leading-relaxed">
+              <span class="lang-tw">所有資料截至 2026 年 5 月。如有變更恕不另行通知。</span>
+              <span class="lang-jp">本情報は 2026 年 5 月時点のものです。予告なく変更となる場合がございます。</span>
+            </p>
+          </div>
+
+          <div class="lg:col-span-7 hk-reveal">
+            <dl class="border border-hk rounded-xl overflow-hidden bg-white divide-y divide-hk text-sm">
+              <div class="grid grid-cols-3 gap-4 p-5">
+                <dt class="font-bold text-hk-heading"><span class="lang-tw">公司名稱</span><span class="lang-jp">社名</span></dt>
+                <dd class="col-span-2 text-hk-heading">
+                  <span class="lang-tw">台灣北菱股份有限公司</span>
+                  <span class="lang-jp">台湾北菱股份有限公司</span>
+                  <span class="block text-xs text-hk-text mt-0.5">TAIWAN HOKURYO CO., LTD.</span>
+                </dd>
+              </div>
+              <div class="grid grid-cols-3 gap-4 p-5">
+                <dt class="font-bold text-hk-heading"><span class="lang-tw">設立日期</span><span class="lang-jp">設立日</span></dt>
+                <dd class="col-span-2 text-hk-heading">1997.12.01</dd>
+              </div>
+              <div class="grid grid-cols-3 gap-4 p-5">
+                <dt class="font-bold text-hk-heading"><span class="lang-tw">所在地</span><span class="lang-jp">所在地</span></dt>
+                <dd class="col-span-2 text-hk-heading">
+                  <span class="lang-tw">台北市敦化南路 1 段 205 號<br>國際貿易大樓 (ITB) 16F 1602</span>
+                  <span class="lang-jp">台北市敦化南路 1 段 205 号<br>国際貿易ビル (ITB) 16F 1602</span>
+                </dd>
+              </div>
+              <div class="grid grid-cols-3 gap-4 p-5">
+                <dt class="font-bold text-hk-heading"><span class="lang-tw">資本額</span><span class="lang-jp">資本金</span></dt>
+                <dd class="col-span-2 text-hk-heading">
+                  NT$6,000,000
+                  <span class="block text-xs text-hk-text mt-0.5"><span class="lang-tw">北菱電興株式會社 100% 獨資子公司</span><span class="lang-jp">北菱電興株式会社 100% 出資子会社</span></span>
+                </dd>
+              </div>
+              <div class="grid grid-cols-3 gap-4 p-5">
+                <dt class="font-bold text-hk-heading"><span class="lang-tw">交易銀行</span><span class="lang-jp">取引銀行</span></dt>
+                <dd class="col-span-2 text-hk-heading">
+                  <span class="lang-tw">三菱日聯銀行 台北支店・聯邦銀行・彰化銀行</span>
+                  <span class="lang-jp">三菱 UFJ 銀行 台北支店・聯邦銀行・彰化銀行</span>
+                </dd>
+              </div>
+              <div class="grid grid-cols-3 gap-4 p-5">
+                <dt class="font-bold text-hk-heading"><span class="lang-tw">員工人數</span><span class="lang-jp">従業員数</span></dt>
+                <dd class="col-span-2 text-hk-heading">
+                  <span class="lang-tw">5 人（截至 2026 年 5 月）</span>
+                  <span class="lang-jp">5 名（2026 年 5 月時点）</span>
+                </dd>
+              </div>
+              <div class="grid grid-cols-3 gap-4 p-5">
+                <dt class="font-bold text-hk-heading"><span class="lang-tw">母公司</span><span class="lang-jp">親会社</span></dt>
+                <dd class="col-span-2 text-hk-heading">
+                  <span class="lang-tw">北菱電興株式會社</span>
+                  <span class="lang-jp">北菱電興株式会社</span>
+                </dd>
+              </div>
+              <div class="grid grid-cols-3 gap-4 p-5">
+                <dt class="font-bold text-hk-heading"><span class="lang-tw">官方網站</span><span class="lang-jp">公式サイト</span></dt>
+                <dd class="col-span-2"><a href="https://hokuryo.com.tw" class="text-hk-primary hover:underline">hokuryo.com.tw</a></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         BOARD OF DIRECTORS
+         ============================================================ -->
+    <section class="bg-hk-soft py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 hk-reveal">
+          <span class="hk-eyebrow justify-center">LEADERSHIP</span>
+          <h2 class="hk-h-decorated text-center font-display text-3xl lg:text-5xl mt-4 mb-6">
+            <span class="lang-tw">董事陣容</span>
+            <span class="lang-jp">役員紹介</span>
+          </h2>
+          <p class="text-base leading-relaxed">
+            <span class="lang-tw">由日本北菱電興總部高階主管組成，並由駐外總經理負責台灣在地營運，確保總部品質方針與在地執行的一致性。</span>
+            <span class="lang-jp">日本北菱電興本社の経営幹部で構成され、駐在総経理が台湾現地運営を担当。本社の品質方針と現地実行の一貫性を確保します。</span>
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 hk-reveal">
+
+          <article class="hk-card p-6 text-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-hk-primary to-hk-dark mx-auto mb-4 flex items-center justify-center text-white text-2xl font-extrabold">小</div>
+            <div class="text-xs tracking-widest text-hk-primary font-bold mb-2">CHAIRMAN</div>
+            <h3 class="font-bold text-hk-heading text-lg mb-1">
+              <span class="lang-tw">小倉 一郎</span>
+              <span class="lang-jp">小倉 一郎</span>
+            </h3>
+            <div class="text-xs text-hk-text"><span class="lang-tw">董事長</span><span class="lang-jp">代表取締役会長</span></div>
+            <div class="mt-3 text-xs leading-relaxed"><span class="lang-tw">北菱電興㈱ 代表取締役社長</span><span class="lang-jp">北菱電興㈱ 代表取締役社長</span></div>
+          </article>
+
+          <article class="hk-card p-6 text-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-hk-primary to-hk-dark mx-auto mb-4 flex items-center justify-center text-white text-2xl font-extrabold">小</div>
+            <div class="text-xs tracking-widest text-hk-primary font-bold mb-2">DIRECTOR</div>
+            <h3 class="font-bold text-hk-heading text-lg mb-1">
+              <span class="lang-tw">小倉 憲二</span>
+              <span class="lang-jp">小倉 憲二</span>
+            </h3>
+            <div class="text-xs text-hk-text"><span class="lang-tw">董事</span><span class="lang-jp">取締役</span></div>
+            <div class="mt-3 text-xs leading-relaxed"><span class="lang-tw">北菱電興㈱ 専務取締役</span><span class="lang-jp">北菱電興㈱ 専務取締役</span></div>
+          </article>
+
+          <article class="hk-card p-6 text-center border-2 border-hk-accent">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-hk-accent to-hk-accentLight mx-auto mb-4 flex items-center justify-center text-white text-2xl font-extrabold">福</div>
+            <div class="text-xs tracking-widest text-hk-accent font-bold mb-2">PRESIDENT</div>
+            <h3 class="font-bold text-hk-heading text-lg mb-1">
+              <span class="lang-tw">福島 真一郎</span>
+              <span class="lang-jp">福島 真一郎</span>
+            </h3>
+            <div class="text-xs text-hk-text"><span class="lang-tw">董事總經理</span><span class="lang-jp">取締役社長</span></div>
+            <div class="mt-3 text-xs leading-relaxed"><span class="lang-tw">駐外人員（台灣現地責任者）</span><span class="lang-jp">駐在員（台湾現地責任者）</span></div>
+          </article>
+
+          <article class="hk-card p-6 text-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-hk-primary to-hk-dark mx-auto mb-4 flex items-center justify-center text-white text-2xl font-extrabold">水</div>
+            <div class="text-xs tracking-widest text-hk-primary font-bold mb-2">AUDITOR</div>
+            <h3 class="font-bold text-hk-heading text-lg mb-1">
+              <span class="lang-tw">水谷 真</span>
+              <span class="lang-jp">水谷 真</span>
+            </h3>
+            <div class="text-xs text-hk-text"><span class="lang-tw">監察人</span><span class="lang-jp">監査役</span></div>
+            <div class="mt-3 text-xs leading-relaxed"><span class="lang-tw">北菱電興㈱ 管理本部 副本部長 執行役員</span><span class="lang-jp">北菱電興㈱ 管理本部 副本部長 執行役員</span></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         BUSINESS POLICY / 經營方針
+         ============================================================ -->
+    <section class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+          <div class="lg:col-span-5 lg:sticky lg:top-28 hk-reveal">
+            <span class="hk-eyebrow mb-4">BUSINESS POLICY</span>
+            <h2 class="hk-h-decorated font-display text-3xl lg:text-5xl text-hk-heading mt-4 mb-6">
+              <span class="lang-tw">經營方針</span>
+              <span class="lang-jp">経営方針</span>
+            </h2>
+            <p class="text-base leading-relaxed mb-6">
+              <span class="lang-tw">以台灣、中國為據點，挖掘高性價比的零件與產品，及時提供給北菱電興與客戶。同時拓展北菱電興產品在台之銷售網絡，並專注經營 AquaPort 自動給水設備之台灣業務。</span>
+              <span class="lang-jp">台湾・中国を拠点に、コストパフォーマンスの高い部品・製品を発掘し、北菱電興および顧客へタイムリーに提供。同時に北菱電興製品の台湾販売網を拡大し、AquaPort 自動給水設備の台湾業務に注力します。</span>
+            </p>
+          </div>
+
+          <div class="lg:col-span-7 space-y-4 hk-reveal">
+
+            <div class="bg-white border border-hk rounded-xl p-7 hover:border-hk-primary transition">
+              <div class="flex items-start gap-5">
+                <div class="text-hk-primary font-extrabold text-2xl shrink-0 w-12">01</div>
+                <div>
+                  <h4 class="font-bold text-hk-heading text-lg mb-2">
+                    <span class="lang-tw">台灣・中國高性價比採購</span>
+                    <span class="lang-jp">台湾・中国における高 CP 調達</span>
+                  </h4>
+                  <p class="text-sm leading-relaxed">
+                    <span class="lang-tw">在台灣與中國挖掘價格實惠的零件與產品，及時提供給北菱電興總部及客戶。</span>
+                    <span class="lang-jp">台湾・中国にて手頃な価格の部品・製品を発掘し、北菱電興本社および顧客へ即時提供します。</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white border border-hk rounded-xl p-7 hover:border-hk-primary transition">
+              <div class="flex items-start gap-5">
+                <div class="text-hk-primary font-extrabold text-2xl shrink-0 w-12">02</div>
+                <div>
+                  <h4 class="font-bold text-hk-heading text-lg mb-2">
+                    <span class="lang-tw">在地販售據點與市場拓展</span>
+                    <span class="lang-jp">現地販売拠点と市場開拓</span>
+                  </h4>
+                  <p class="text-sm leading-relaxed">
+                    <span class="lang-tw">以台灣、中國為北菱電興產品及客戶產品之販售據點，進行顧客需求蒐集、銷售與促銷活動。</span>
+                    <span class="lang-jp">台湾・中国を北菱電興製品および顧客製品の販売拠点とし、ニーズ収集、販売、プロモーションを展開します。</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white border border-hk rounded-xl p-7 border-l-4 border-l-hk-accent hover:border-hk-accent transition">
+              <div class="flex items-start gap-5">
+                <div class="text-hk-accent font-extrabold text-2xl shrink-0 w-12">03</div>
+                <div>
+                  <h4 class="font-bold text-hk-heading text-lg mb-2">
+                    <span class="lang-tw">AquaPort 台灣總代理業務</span>
+                    <span class="lang-jp">AquaPort 台湾総代理店業務</span>
+                  </h4>
+                  <p class="text-sm leading-relaxed">
+                    <span class="lang-tw">北菱電興自有品牌 AquaPort（水田用自動給水設備）在台之銷售與推廣業務，導入智慧灌溉解決方案。</span>
+                    <span class="lang-jp">北菱電興オリジナルブランド AquaPort（水田用自動給水設備）の台湾における販売・普及業務。スマート灌漑ソリューションを推進します。</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white border border-hk rounded-xl p-7 hover:border-hk-primary transition">
+              <div class="flex items-start gap-5">
+                <div class="text-hk-primary font-extrabold text-2xl shrink-0 w-12">04</div>
+                <div>
+                  <h4 class="font-bold text-hk-heading text-lg mb-2">
+                    <span class="lang-tw">日台企劃支援與在地市場諮詢</span>
+                    <span class="lang-jp">日台プロジェクト支援と現地市場コンサルティング</span>
+                  </h4>
+                  <p class="text-sm leading-relaxed">
+                    <span class="lang-tw">為計劃拓點台灣或銷售自家產品的日系企業，提供諮詢、當地市場調查、PR、進出口貿易與業務委託等服務。</span>
+                    <span class="lang-jp">台湾進出または自社製品の販売を計画する日系企業に、コンサルティング、現地市場調査、PR、輸出入貿易、業務委託等のサービスを提供します。</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         WHY CHOOSE US
+         ============================================================ -->
+    <section class="bg-gradient-to-br from-hk-primary to-hk-dark text-white py-20 lg:py-28 relative overflow-hidden">
+      <div class="absolute inset-0 hk-grid-pattern opacity-15"></div>
+      <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto mb-16 hk-reveal">
+          <div class="text-hk-accent text-[10px] tracking-[0.3em] font-bold mb-4">WHY HOKURYO</div>
+          <h2 class="font-display text-3xl lg:text-5xl mt-4 mb-6 text-white font-extrabold">
+            <span class="lang-tw">選擇台灣北菱的好處</span>
+            <span class="lang-jp">台湾北菱を選ぶメリット</span>
+          </h2>
+          <p class="text-base leading-relaxed text-white/85">
+            <span class="lang-tw">替日系企業省下在台設立分公司的人事、房租成本，提供靈活的在地支援。</span>
+            <span class="lang-jp">日系企業の台湾現地法人設立に伴う人件費・賃料を削減し、柔軟な現地サポートを提供します。</span>
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 hk-reveal">
+
+          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-7">
+            <div class="text-hk-accent text-3xl mb-3">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <h4 class="font-bold text-white text-lg mb-2"><span class="lang-tw">削減固定成本</span><span class="lang-jp">固定費削減</span></h4>
+            <p class="text-sm leading-relaxed text-white/80">
+              <span class="lang-tw">省下在台設立法人的獎金、保險、交通費及房租。</span>
+              <span class="lang-jp">現地法人設立に伴うボーナス・保険・交通費・賃料を圧縮。</span>
+            </p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-7">
+            <div class="text-hk-accent text-3xl mb-3">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+            </div>
+            <h4 class="font-bold text-white text-lg mb-2"><span class="lang-tw">打進海外市場</span><span class="lang-jp">海外市場への参入</span></h4>
+            <p class="text-sm leading-relaxed text-white/80">
+              <span class="lang-tw">由我們作為您的台灣／中國在地觸角，無須漫長設立流程。</span>
+              <span class="lang-jp">弊社が貴社の台湾・中国現地拠点となり、長い設立プロセスは不要。</span>
+            </p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-7">
+            <div class="text-hk-accent text-3xl mb-3">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>
+            </div>
+            <h4 class="font-bold text-white text-lg mb-2"><span class="lang-tw">削減人事與經費</span><span class="lang-jp">人件費・経費の削減</span></h4>
+            <p class="text-sm leading-relaxed text-white/80">
+              <span class="lang-tw">獎金、保險、交通費、辦公室等龐大支出皆可省略。</span>
+              <span class="lang-jp">ボーナス・保険・交通費・オフィス賃料等の大規模支出を回避。</span>
+            </p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-7">
+            <div class="text-hk-accent text-3xl mb-3">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <h4 class="font-bold text-white text-lg mb-2"><span class="lang-tw">致力於業務活動</span><span class="lang-jp">事業活動に集中</span></h4>
+            <p class="text-sm leading-relaxed text-white/80">
+              <span class="lang-tw">繁瑣事務由我們處理，您的團隊聚焦於業務發展。</span>
+              <span class="lang-jp">煩雑な業務は弊社が代行、貴社チームは事業開発に専念可能。</span>
+            </p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-7">
+            <div class="text-hk-accent text-3xl mb-3">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7zM3 7l9 4 9-4M12 11v10"/></svg>
+            </div>
+            <h4 class="font-bold text-white text-lg mb-2"><span class="lang-tw">25 年供應鏈經驗</span><span class="lang-jp">25 年のサプライチェーン経験</span></h4>
+            <p class="text-sm leading-relaxed text-white/80">
+              <span class="lang-tw">電子零件、機械加工、半導體領域累積深厚 know-how。</span>
+              <span class="lang-jp">電子部品、機械加工、半導体分野で深いノウハウを蓄積。</span>
+            </p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-7 bg-hk-accent/95 border-hk-accent text-hk-heading">
+            <div class="text-hk-heading text-3xl mb-3">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h4 class="font-bold text-hk-heading text-lg mb-2"><span class="lang-tw">日系品質承諾</span><span class="lang-jp">日系品質のお約束</span></h4>
+            <p class="text-sm leading-relaxed text-hk-heading/85">
+              <span class="lang-tw">北菱電興 100% 獨資，承襲日本企業之嚴謹品質要求。</span>
+              <span class="lang-jp">北菱電興 100% 出資、日本企業の厳格な品質基準を継承。</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CTA
+         ============================================================ -->
+    <section class="py-16 lg:py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center hk-reveal">
+        <h2 class="font-display font-extrabold text-3xl lg:text-4xl text-hk-heading mb-6">
+          <span class="lang-tw">準備與我們一起踏出新的一步？</span>
+          <span class="lang-jp">私たちと共に、次の一歩を。</span>
+        </h2>
+        <p class="text-base lg:text-lg max-w-2xl mx-auto mb-10">
+          <span class="lang-tw">無論您是想委託採購、需要業務代行，或對 AquaPort 產品感興趣，歡迎聯繫我們。</span>
+          <span class="lang-jp">調達のご依頼、業務代行のご相談、AquaPort へのご関心、いずれもお気軽にお問い合わせください。</span>
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="contact.html" class="hk-btn-primary"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a>
+          <a href="products.html" class="hk-btn-ghost"><span class="lang-tw">瀏覽產品與服務</span><span class="lang-jp">事業内容を見る</span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="bg-hk-heading text-white/80">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-4">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded bg-hk-primary flex items-center justify-center text-white font-extrabold">北</div>
+              <div>
+                <div class="text-white font-bold"><span class="lang-tw">台灣北菱股份有限公司</span><span class="lang-jp">台湾北菱股份有限公司</span></div>
+                <div class="text-[10px] tracking-[0.2em] text-hk-accent font-semibold">TAIWAN HOKURYO CO., LTD.</div>
+              </div>
+            </div>
+            <p class="text-sm leading-relaxed text-white/60 mb-5">
+              <span class="lang-tw">連接台日的專業橋樑。1997 年成立，北菱電興株式會社 100% 獨資子公司。</span>
+              <span class="lang-jp">日台ビジネスを繋ぐ専門ブリッジ。1997 年設立、北菱電興株式会社 100% 出資子会社。</span>
+            </p>
+            <div class="text-[10px] tracking-[0.3em] text-hk-accent">[ Hello, World! ] Try the next.</div>
+          </div>
+
+          <div class="lg:col-span-3">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">服務項目</span><span class="lang-jp">サービス</span></h5>
+            <ul class="space-y-3 text-sm">
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">海外採購代行</span><span class="lang-jp">海外調達代行</span></a></li>
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">業務代行・人員代理</span><span class="lang-jp">業務代行・人員代行</span></a></li>
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">進出口通關・保稅倉</span><span class="lang-jp">輸出入通関・保税倉庫</span></a></li>
+              <li><a href="products.html#aquaport"   class="hover:text-hk-accent transition">AquaPort</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-2">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">導覽</span><span class="lang-jp">ナビゲーション</span></h5>
+            <ul class="space-y-3 text-sm">
+              <li><a href="about.html"   class="hover:text-hk-accent transition"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a></li>
+              <li><a href="products.html" class="hover:text-hk-accent transition"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a></li>
+              <li><a href="blog.html"     class="hover:text-hk-accent transition"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a></li>
+              <li><a href="contact.html"  class="hover:text-hk-accent transition"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-3">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">聯絡資訊</span><span class="lang-jp">お問い合わせ</span></h5>
+            <ul class="space-y-3 text-sm leading-relaxed">
+              <li>
+                <span class="lang-tw">台北市敦化南路 1 段 205 號<br>國際貿易大樓 (ITB) 16F 1602</span>
+                <span class="lang-jp">台北市敦化南路 1 段 205 号<br>国際貿易ビル (ITB) 16F 1602</span>
+              </li>
+              <li><a href="tel:+886227517084" class="hover:text-hk-accent transition">TEL: 02-2751-7084</a></li>
+              <li><a href="mailto:info@hokuryo.com.tw" class="hover:text-hk-accent transition">info@hokuryo.com.tw</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/50">
+          <div>© 1997 - 2026 TAIWAN HOKURYO CO., LTD. All rights reserved.</div>
+          <div>
+            <span class="lang-tw">北菱電興株式会社 100% 獨資子公司</span>
+            <span class="lang-jp">北菱電興株式会社 100% 出資子会社</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
