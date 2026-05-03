@@ -1,0 +1,215 @@
+/* ============================================================
+   Taiwan Hokuryo - Brand Stylesheet
+   依照「臺灣北菱設計系統」Global Color 規範
+   ============================================================ */
+
+:root {
+  /* Brand */
+  --hk-primary:        #2C76A8;
+  --hk-primary-dark:   #24618B;
+  --hk-accent:         #FBA505;
+  --hk-accent-light:   #FCB32A;
+
+  /* Neutrals */
+  --hk-text:           #7A7A7A;
+  --hk-heading:        #393939;
+  --hk-heading-alt:    #333333;
+  --hk-border:         #DDDDDD;
+  --hk-bg:             #FFFFFF;
+  --hk-bg-soft:        #FAFBFC;
+  --hk-bg-section:     #F9F9F9;
+  --hk-black:          #000000;
+}
+
+/* Base */
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans TC', 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--hk-text);
+  background-color: var(--hk-bg);
+  font-feature-settings: "palt";
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--hk-heading);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* Brand utilities */
+.text-hk-primary { color: var(--hk-primary); }
+.text-hk-accent  { color: var(--hk-accent); }
+.bg-hk-primary   { background-color: var(--hk-primary); }
+.bg-hk-primary-dark { background-color: var(--hk-primary-dark); }
+.bg-hk-accent    { background-color: var(--hk-accent); }
+.bg-hk-soft      { background-color: var(--hk-bg-soft); }
+.bg-hk-section   { background-color: var(--hk-bg-section); }
+.border-hk       { border-color: var(--hk-border); }
+
+/* Hero gradient backdrop */
+.hk-hero-bg {
+  background:
+    radial-gradient(circle at 80% 10%, rgba(251,165,5,0.08) 0%, transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(44,118,168,0.10) 0%, transparent 50%),
+    linear-gradient(180deg, #FAFBFC 0%, #FFFFFF 100%);
+}
+
+.hk-grid-pattern {
+  background-image:
+    linear-gradient(rgba(44,118,168,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44,118,168,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Section header decorator */
+.hk-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--hk-primary);
+}
+.hk-eyebrow::before {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--hk-primary);
+}
+
+/* Buttons */
+.hk-btn-primary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  background: var(--hk-primary);
+  color: #fff !important;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: all .25s ease;
+  border: 1px solid var(--hk-primary);
+}
+.hk-btn-primary:hover {
+  background: var(--hk-primary-dark);
+  border-color: var(--hk-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px -8px rgba(44,118,168,.45);
+}
+
+.hk-btn-accent {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  background: var(--hk-accent);
+  color: #1a1a1a !important;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: all .25s ease;
+}
+.hk-btn-accent:hover {
+  background: var(--hk-accent-light);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px -8px rgba(251,165,5,.55);
+}
+
+.hk-btn-ghost {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border: 1px solid var(--hk-border);
+  color: var(--hk-heading) !important;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all .25s ease;
+}
+.hk-btn-ghost:hover {
+  border-color: var(--hk-primary);
+  color: var(--hk-primary) !important;
+}
+
+/* Cards */
+.hk-card {
+  background: #fff;
+  border: 1px solid var(--hk-border);
+  border-radius: 8px;
+  transition: all .3s ease;
+}
+.hk-card:hover {
+  border-color: var(--hk-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -20px rgba(36,97,139,.18);
+}
+
+/* Number stat */
+.hk-stat-num {
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  font-weight: 800;
+  color: var(--hk-primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Language switcher */
+.hk-lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--hk-border);
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+}
+.hk-lang-switch button {
+  padding: 0.35rem 0.95rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--hk-text);
+  background: transparent;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.hk-lang-switch button.active {
+  background: var(--hk-primary);
+  color: #fff;
+}
+
+/* Decorated heading */
+.hk-h-decorated::after {
+  content: '';
+  display: block;
+  width: 56px; height: 3px;
+  background: var(--hk-accent);
+  margin-top: 1rem;
+}
+.hk-h-decorated.text-center::after { margin-left:auto; margin-right:auto; }
+
+/* Reveal animation */
+.hk-reveal { opacity: 0; transform: translateY(24px); transition: all .8s ease; }
+.hk-reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* Image placeholder */
+.hk-img-ph {
+  background:
+    repeating-linear-gradient(45deg, #eef3f7 0 12px, #f7fafc 12px 24px);
+  border: 1px dashed var(--hk-border);
+  display: flex; align-items: center; justify-content: center;
+  color: #9aaab8; font-size: 0.85rem; letter-spacing: 0.05em;
+  border-radius: 8px;
+}
+
+/* Language visibility */
+.lang-jp { display: none; }
+html[lang="ja"] .lang-tw { display: none; }
+html[lang="ja"] .lang-jp { display: inline; }
+html[lang="ja"] .lang-jp.block-jp { display: block; }
+.block-tw { display: block; }
+html[lang="ja"] .block-tw { display: none; }
+
+/* Mobile menu */
+.hk-menu-open { overflow: hidden; }
+@media (max-width: 1023px) {
+  .hk-mobile-nav {
+    transform: translateX(100%);
+    transition: transform .35s ease;
+  }
+  .hk-mobile-nav.open { transform: translateX(0); }
+}

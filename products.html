@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>產品與服務｜業務代行・全球採購 ＆ AquaPort 自動給水系統｜台灣北菱</title>
+  <meta name="description" content="台灣北菱兩大核心業務：海外採購代行與業務代理服務，以及 AquaPort 水田用自動給水系統台灣總代理。25 年深耕台日商務經驗。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hk: {
+              primary:'#2C76A8', dark:'#24618B', accent:'#FBA505', accentLight:'#FCB32A',
+              text:'#7A7A7A', heading:'#393939', border:'#DDDDDD',
+              soft:'#FAFBFC', section:'#F9F9F9'
+            }
+          },
+          fontFamily: {
+            sans: ['Noto Sans TC', 'Noto Sans JP', 'Inter', 'sans-serif'],
+            display: ['Inter', 'Noto Sans JP', 'Noto Sans TC', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-white text-hk-text">
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header data-header class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-hk">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="flex items-center justify-between h-[72px]">
+
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded bg-hk-primary flex items-center justify-center text-white font-display font-extrabold text-lg">北</div>
+          <div class="leading-tight">
+            <div class="text-[15px] font-bold text-hk-heading">
+              <span class="lang-tw">台灣北菱</span><span class="lang-jp">台湾北菱</span>
+            </div>
+            <div class="text-[10px] tracking-[0.2em] text-hk-primary font-semibold">TAIWAN HOKURYO</div>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html"    class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+          <a href="about.html"    class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a>
+          <a href="products.html" class="text-sm font-semibold text-hk-primary"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a>
+          <a href="blog.html"     class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a>
+          <a href="contact.html"  class="text-sm font-medium text-hk-heading hover:text-hk-primary transition"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <div class="hk-lang-switch" role="group" aria-label="Language switcher">
+            <button data-lang-btn="tw" class="active">中文</button>
+            <button data-lang-btn="jp">日本語</button>
+          </div>
+          <a href="contact.html" class="hidden md:inline-flex hk-btn-primary text-sm">
+            <span class="lang-tw">聯絡諮詢</span><span class="lang-jp">お問合せ</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <button data-menu-toggle class="lg:hidden p-2 text-hk-heading" aria-expanded="false" aria-label="Open menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav data-mobile-nav class="hk-mobile-nav lg:hidden fixed top-[72px] right-0 bottom-0 w-full sm:w-[320px] bg-white border-l border-hk px-6 py-8 space-y-1 shadow-2xl">
+      <a href="index.html"    class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+      <a href="about.html"    class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a>
+      <a href="products.html" class="block py-3 text-base font-semibold text-hk-primary border-b border-hk"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a>
+      <a href="blog.html"     class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a>
+      <a href="contact.html"  class="block py-3 text-base font-medium text-hk-heading border-b border-hk"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a>
+      <a href="contact.html"  class="hk-btn-primary mt-6 w-full justify-center"><span class="lang-tw">聯絡諮詢</span><span class="lang-jp">お問合せ</span></a>
+    </nav>
+  </header>
+
+
+  <main class="pt-[72px]">
+
+    <!-- ============================================================
+         PAGE HERO
+         ============================================================ -->
+    <section class="hk-hero-bg relative overflow-hidden">
+      <div class="absolute inset-0 hk-grid-pattern opacity-50"></div>
+      <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-24">
+        <nav class="flex items-center gap-2 text-xs text-hk-text mb-8">
+          <a href="index.html" class="hover:text-hk-primary"><span class="lang-tw">首頁</span><span class="lang-jp">ホーム</span></a>
+          <span>/</span>
+          <span class="text-hk-heading font-medium"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></span>
+        </nav>
+        <span class="hk-eyebrow mb-4">PRODUCTS &amp; SERVICES</span>
+        <h1 class="font-display font-extrabold text-hk-heading text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mt-4 mb-6 max-w-4xl">
+          <span class="lang-tw">兩大核心業務，<br>連接您與世界的下一站。</span>
+          <span class="lang-jp">2 つの中核事業で、<br>次の世界へ。</span>
+        </h1>
+        <p class="text-lg text-hk-heading max-w-3xl leading-relaxed">
+          <span class="lang-tw">第一是<strong class="text-hk-primary">海外業務代行與全球採購</strong>，第二是<strong class="text-hk-primary">AquaPort 水田用自動給水系統</strong>。我們從台北出發，為日系企業提供值得信賴的在地夥伴關係。</span>
+          <span class="lang-jp">第一に<strong class="text-hk-primary">海外業務代行とグローバル調達</strong>、第二に<strong class="text-hk-primary">AquaPort 水田用自動給水システム</strong>。台北を起点に、日系企業の信頼できる現地パートナーとなります。</span>
+        </p>
+
+        <!-- Section anchor nav -->
+        <div class="mt-10 flex flex-wrap gap-3">
+          <a href="#procurement" class="hk-btn-primary">
+            <span class="lang-tw">A. 業務代行與採購</span><span class="lang-jp">A. 業務代行・調達</span>
+          </a>
+          <a href="#aquaport" class="hk-btn-accent">
+            <span class="lang-tw">B. AquaPort 自動給水</span><span class="lang-jp">B. AquaPort 自動給水</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION A — 業務代行與採購
+         ============================================================ -->
+    <section id="procurement" class="py-20 lg:py-28 bg-white scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="grid lg:grid-cols-12 gap-12 mb-16">
+          <div class="lg:col-span-5 hk-reveal">
+            <span class="hk-eyebrow mb-4">SECTION A</span>
+            <h2 class="hk-h-decorated font-display text-3xl lg:text-5xl text-hk-heading mt-4 mb-6">
+              <span class="lang-tw">業務代行<br>與全球採購</span>
+              <span class="lang-jp">業務代行<br>とグローバル調達</span>
+            </h2>
+          </div>
+          <div class="lg:col-span-7 hk-reveal">
+            <p class="text-base lg:text-lg leading-relaxed text-hk-heading mb-5">
+              <span class="lang-tw">為「在台無據點之日本企業」與「欲與日本企業交易之台灣企業」提供完整的業務代行解決方案。本公司以台灣在地法人之姿，協助客戶採購電子零件、機械加工件、OEM 生產，並提供販售、議價、銷路拓展等服務。</span>
+              <span class="lang-jp">「台湾に拠点のない日系企業」と「日本企業との取引を希望する台湾企業」の双方に、完全な業務代行ソリューションを提供。台湾現地法人として、電子部品・機械加工品・OEM 生産の調達、販売、価格交渉、販路開拓をサポートいたします。</span>
+            </p>
+            <p class="text-sm leading-relaxed text-hk-text">
+              <span class="lang-tw">已採購電子零件、機械加工零件 20 餘年，並與台灣數間大小規模企業聯手，提供符合客人需求之品質、產品和價格。</span>
+              <span class="lang-jp">電子部品・機械加工部品の調達は 20 年以上の実績。台湾の大小様々な企業と連携し、お客様のニーズに合わせた品質・製品・価格をご提案します。</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- 6 Service Cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hk-reveal">
+
+          <article class="hk-card p-7">
+            <div class="w-12 h-12 rounded-lg bg-hk-primary/10 text-hk-primary flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7l9-4 9 4M3 7v10l9 4 9-4V7M3 7l9 4 9-4M12 11v10"/></svg>
+            </div>
+            <h3 class="font-bold text-hk-heading text-lg mb-3"><span class="lang-tw">海外採購代理</span><span class="lang-jp">海外調達代行</span></h3>
+            <p class="text-sm leading-relaxed">
+              <span class="lang-tw">代替無在台據點之企業，協助在台採購商品、零件、議價、銷路拓展。涵蓋電子零件、機械加工件、半導體等多元品項。</span>
+              <span class="lang-jp">台湾に拠点のない企業に代わり、商品・部品調達、価格交渉、販路開拓を実施。電子部品、機械加工品、半導体など多岐にわたる品目に対応します。</span>
+            </p>
+          </article>
+
+          <article class="hk-card p-7">
+            <div class="w-12 h-12 rounded-lg bg-hk-primary/10 text-hk-primary flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg>
+            </div>
+            <h3 class="font-bold text-hk-heading text-lg mb-3"><span class="lang-tw">虛擬辦公室・分公司營運</span><span class="lang-jp">バーチャルオフィス・現地法人運営</span></h3>
+            <p class="text-sm leading-relaxed">
+              <span class="lang-tw">以您的名義在台灣／中國運營，如同擁有海外分公司一般，省下設立法人的人事、租金等龐大費用與時間。</span>
+              <span class="lang-jp">貴社名義で台湾・中国にて運営。海外法人設立に伴う人件費・賃料等の固定費と時間を削減します。</span>
+            </p>
+          </article>
+
+          <article class="hk-card p-7">
+            <div class="w-12 h-12 rounded-lg bg-hk-primary/10 text-hk-primary flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-3.5 3-6 7-6s7 2.5 7 6M16 11h6M19 8v6"/></svg>
+            </div>
+            <h3 class="font-bold text-hk-heading text-lg mb-3"><span class="lang-tw">人員代理</span><span class="lang-jp">人員代行</span></h3>
+            <p class="text-sm leading-relaxed">
+              <span class="lang-tw">產假、育嬰假等人力斷層期間，由我們派遣熟悉台日業務的人員短期或長期支援，業務不中斷。</span>
+              <span class="lang-jp">産休・育休等の人材ギャップ期間中、日台業務に精通した人員を短期・長期で派遣し、業務継続をサポートします。</span>
+            </p>
+          </article>
+
+          <article class="hk-card p-7">
+            <div class="w-12 h-12 rounded-lg bg-hk-primary/10 text-hk-primary flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="14" height="12" rx="2"/><path d="M17 10l4-2v8l-4-2"/></svg>
+            </div>
+            <h3 class="font-bold text-hk-heading text-lg mb-3"><span class="lang-tw">海外視訊出差代行</span><span class="lang-jp">リモート出張代行</span></h3>
+            <p class="text-sm leading-relaxed">
+              <span class="lang-tw">當客戶想確認台灣在地的製品・商品時，本公司透過 Zoom 等即時連線回報當地狀況，亦可代替貴公司海外人員在台執行各項業務。</span>
+              <span class="lang-jp">台湾現地の製品・商品確認をお求めの場合、Zoom 等のオンライン会議で現地状況を即時報告。貴社海外要員の代わりに現地業務を代行いたします。</span>
+            </p>
+          </article>
+
+          <article class="hk-card p-7">
+            <div class="w-12 h-12 rounded-lg bg-hk-primary/10 text-hk-primary flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1h-4v-7H8v7H4a1 1 0 01-1-1V9z"/></svg>
+            </div>
+            <h3 class="font-bold text-hk-heading text-lg mb-3"><span class="lang-tw">進出口通關</span><span class="lang-jp">輸出入通関</span></h3>
+            <p class="text-sm leading-relaxed">
+              <span class="lang-tw">日本、韓國製半導體產品的進出口報關業務，從文件處理到實際通關全程代辦。</span>
+              <span class="lang-jp">日本・韓国製半導体の輸出入通関業務。書類対応から実通関まで一括対応します。</span>
+            </p>
+          </article>
+
+          <article class="hk-card p-7">
+            <div class="w-12 h-12 rounded-lg bg-hk-primary/10 text-hk-primary flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 13h18M8 8V5a4 4 0 018 0v3"/></svg>
+            </div>
+            <h3 class="font-bold text-hk-heading text-lg mb-3"><span class="lang-tw">保稅倉儲業務</span><span class="lang-jp">保税倉庫業務</span></h3>
+            <p class="text-sm leading-relaxed">
+              <span class="lang-tw">台灣保稅倉庫的發貨與出倉業務，配合產品諮詢與在地物流調度，協助您高效管理庫存。</span>
+              <span class="lang-jp">台湾保税倉庫からの出荷・出庫業務。製品問い合わせ対応と現地物流調整を組み合わせ、効率的な在庫管理を実現します。</span>
+            </p>
+          </article>
+        </div>
+
+
+        <!-- 業務代行 流程示意 -->
+        <div class="mt-20 bg-hk-section rounded-2xl p-8 lg:p-12 hk-reveal">
+          <div class="text-center mb-12">
+            <span class="hk-eyebrow justify-center">HOW IT WORKS</span>
+            <h3 class="hk-h-decorated text-center font-display text-2xl lg:text-4xl text-hk-heading mt-3">
+              <span class="lang-tw">業務代行運作流程</span>
+              <span class="lang-jp">業務代行のしくみ</span>
+            </h3>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg p-6 border border-hk relative">
+              <div class="absolute -top-4 left-6 bg-hk-primary text-white text-xs font-bold tracking-widest px-3 py-1 rounded">TYPE 01</div>
+              <h4 class="font-bold text-hk-heading mt-3 mb-3"><span class="lang-tw">客戶 ⇆ 我們 ⇆ 供應商</span><span class="lang-jp">顧客 ⇆ 弊社 ⇆ サプライヤー</span></h4>
+              <p class="text-sm leading-relaxed mb-4"><span class="lang-tw">在台無據點之日本企業，欲在台灣／中國採購零件、商品販售。委託本公司以其名義營運，如同海外分公司。</span><span class="lang-jp">台湾に拠点のない日系企業が、台湾・中国で部品調達や販売を行う場合。貴社名義で海外支店のように運営します。</span></p>
+              <div class="text-xs text-hk-primary font-mono leading-loose">
+                <span class="lang-tw">顧客 → 委託 → 我們 → 指示 → 供應商<br>供應商 → 聯絡 → 我們 → 完成 → 顧客</span>
+                <span class="lang-jp">顧客 → 委託 → 弊社 → 指示 → サプライヤー<br>サプライヤー → 連絡 → 弊社 → 完了 → 顧客</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border border-hk relative">
+              <div class="absolute -top-4 left-6 bg-hk-primary text-white text-xs font-bold tracking-widest px-3 py-1 rounded">TYPE 02</div>
+              <h4 class="font-bold text-hk-heading mt-3 mb-3"><span class="lang-tw">日本企業 ⇆ 我們 ⇆ 台灣</span><span class="lang-jp">日系企業 ⇆ 弊社 ⇆ 台湾</span></h4>
+              <p class="text-sm leading-relaxed mb-4"><span class="lang-tw">在台無據點之日本企業之業務委託。我們提供完整在地落地服務，包含採購、銷售、出貨進貨處理。</span><span class="lang-jp">台湾に拠点のない日系企業の業務委託。調達・販売・出荷入荷処理まで現地落とし込みを完全サポート。</span></p>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border border-hk relative">
+              <div class="absolute -top-4 left-6 bg-hk-accent text-hk-heading text-xs font-bold tracking-widest px-3 py-1 rounded">TYPE 03</div>
+              <h4 class="font-bold text-hk-heading mt-3 mb-3"><span class="lang-tw">台灣企業 ⇆ 我們 ⇆ 日本</span><span class="lang-jp">台湾企業 ⇆ 弊社 ⇆ 日本</span></h4>
+              <p class="text-sm leading-relaxed mb-4"><span class="lang-tw">欲與日本企業交易之台灣企業之業務委託。無須擔憂須付聘用專屬日文人才訓練等龐大費用和時間。</span><span class="lang-jp">日系企業との取引を望む台湾企業の業務委託。日本語専任人材の採用・教育に伴う多大なコスト・時間を回避できます。</span></p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 採購據點地圖 -->
+        <div class="mt-20 hk-reveal">
+          <div class="text-center mb-12">
+            <span class="hk-eyebrow justify-center">PROCUREMENT NETWORK</span>
+            <h3 class="hk-h-decorated text-center font-display text-2xl lg:text-4xl text-hk-heading mt-3 mb-4">
+              <span class="lang-tw">採購・販售據點</span>
+              <span class="lang-jp">調達・販売拠点</span>
+            </h3>
+            <p class="max-w-2xl mx-auto text-sm">
+              <span class="lang-tw">於台灣與中國各大製造城市深耕在地供應網絡，提供從零件採購到 OEM 生產的完整解決方案。</span>
+              <span class="lang-jp">台湾と中国の主要製造都市にて現地サプライネットワークを構築。部品調達から OEM 生産まで一貫対応します。</span>
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="border border-hk rounded-lg p-5 bg-white">
+              <div class="text-xs text-hk-accent font-bold tracking-widest mb-2">TAIWAN ・ 台灣</div>
+              <div class="font-bold text-hk-heading mb-2"><span class="lang-tw">台北・新北・桃園・台中・嘉義</span><span class="lang-jp">台北・新北・桃園・台中・嘉義</span></div>
+              <p class="text-xs leading-relaxed"><span class="lang-tw">採購：鋁壓鑄品、塑膠成型、冷鍛、陶瓷、AC 電源線、電子零件、半導體、鈑金、馬達、線束、LAN 電纜<br>銷售：電子零件、電機、電子產品</span><span class="lang-jp">調達：アルミダイカスト、プラスチック成形、冷鍛、セラミック、AC 電源コード、電子部品、半導体、板金、モーター、ハーネス、LAN ケーブル<br>販売：電子部品、電機、電子製品</span></p>
+            </div>
+            <div class="border border-hk rounded-lg p-5 bg-white">
+              <div class="text-xs text-hk-accent font-bold tracking-widest mb-2">CHINA ・ 廣東省</div>
+              <div class="font-bold text-hk-heading mb-2"><span class="lang-tw">深圳市・東莞市</span><span class="lang-jp">深圳市・東莞市</span></div>
+              <p class="text-xs leading-relaxed"><span class="lang-tw">採購：熱水器、電子零件</span><span class="lang-jp">調達：温水器、電子部品</span></p>
+            </div>
+            <div class="border border-hk rounded-lg p-5 bg-white">
+              <div class="text-xs text-hk-accent font-bold tracking-widest mb-2">CHINA ・ 福建省</div>
+              <div class="font-bold text-hk-heading mb-2"><span class="lang-tw">廈門市</span><span class="lang-jp">廈門市</span></div>
+              <p class="text-xs leading-relaxed"><span class="lang-tw">採購：PCB 電路板</span><span class="lang-jp">調達：PCB 基板</span></p>
+            </div>
+            <div class="border border-hk rounded-lg p-5 bg-white">
+              <div class="text-xs text-hk-accent font-bold tracking-widest mb-2">CHINA ・ 江浙</div>
+              <div class="font-bold text-hk-heading mb-2"><span class="lang-tw">江蘇昆山・浙江杭州</span><span class="lang-jp">江蘇昆山・浙江杭州</span></div>
+              <p class="text-xs leading-relaxed"><span class="lang-tw">採購：遙控器、羽毛產品</span><span class="lang-jp">調達：リモコン、フェザー製品</span></p>
+            </div>
+            <div class="border border-hk rounded-lg p-5 bg-white">
+              <div class="text-xs text-hk-accent font-bold tracking-widest mb-2">CHINA ・ 河南省</div>
+              <div class="font-bold text-hk-heading mb-2"><span class="lang-tw">南陽市</span><span class="lang-jp">南陽市</span></div>
+              <p class="text-xs leading-relaxed"><span class="lang-tw">採購：CdS 光敏電阻</span><span class="lang-jp">調達：CdS（光導電セル）</span></p>
+            </div>
+            <div class="border border-hk rounded-lg p-5 bg-white">
+              <div class="text-xs text-hk-accent font-bold tracking-widest mb-2">CHINA ・ 北京</div>
+              <div class="font-bold text-hk-heading mb-2"><span class="lang-tw">北京市</span><span class="lang-jp">北京市</span></div>
+              <p class="text-xs leading-relaxed"><span class="lang-tw">販售：自動點滅器（照明機器用）</span><span class="lang-jp">販売：自動点滅器（照明機器用）</span></p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- A 區段 CTA -->
+        <div class="mt-16 bg-hk-primary text-white rounded-2xl p-8 lg:p-12 flex flex-col lg:flex-row gap-6 items-center justify-between hk-reveal">
+          <div>
+            <h3 class="font-display font-bold text-xl lg:text-2xl mb-2">
+              <span class="lang-tw">想委託採購、業務代行嗎？</span>
+              <span class="lang-jp">調達・業務代行のご相談はこちら</span>
+            </h3>
+            <p class="text-sm opacity-90">
+              <span class="lang-tw">告訴我們您的需求，由 25 年經驗團隊為您客製方案。</span>
+              <span class="lang-jp">25 年の経験を持つチームが、ご要望に合わせたプランをご提案します。</span>
+            </p>
+          </div>
+          <a href="contact.html?topic=procurement" class="hk-btn-accent shrink-0">
+            <span class="lang-tw">索取客製方案</span><span class="lang-jp">プランを問い合わせる</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION B — AquaPort 水田用自動給水系統
+         ============================================================ -->
+    <section id="aquaport" class="py-20 lg:py-28 bg-hk-section scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="grid lg:grid-cols-12 gap-12 mb-16 items-end">
+          <div class="lg:col-span-7 hk-reveal">
+            <span class="hk-eyebrow mb-4">SECTION B</span>
+            <div class="inline-block bg-hk-accent/15 text-hk-accent text-xs font-bold tracking-widest px-3 py-1 rounded mb-4">
+              <span class="lang-tw">台灣總代理</span><span class="lang-jp">台湾総代理店</span>
+            </div>
+            <h2 class="hk-h-decorated font-display text-3xl lg:text-5xl text-hk-heading mt-4 mb-6">
+              AquaPort
+              <span class="block text-2xl lg:text-3xl font-bold mt-2">
+                <span class="lang-tw">水田用自動給水系統</span>
+                <span class="lang-jp">水田用自動給水システム</span>
+              </span>
+            </h2>
+          </div>
+          <div class="lg:col-span-5 hk-reveal">
+            <p class="text-base lg:text-lg leading-relaxed text-hk-heading">
+              <span class="lang-tw">AquaPort 是一款讓稻作水管理變得更輕鬆的水田用自動給水系統。透過兩個感測器感應水田水位，自動開啟或關閉閘門，進行供水或止水。</span>
+              <span class="lang-jp">アクアポートは、稲作の水管理を楽にする水田用自動給水システム。2 つのセンサーで田んぼの水位を感知し、ゲートを自動開閉して給止水します。</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- 三大特點 -->
+        <div class="grid md:grid-cols-3 gap-5 mb-20 hk-reveal">
+          <div class="bg-white rounded-2xl p-8 border border-hk relative overflow-hidden">
+            <div class="absolute -right-6 -top-6 text-[120px] font-extrabold text-hk-accent/15 leading-none">01</div>
+            <div class="relative">
+              <h3 class="font-bold text-hk-heading text-xl mb-3">
+                <span class="lang-tw">輕鬆入手・價格實惠</span>
+                <span class="lang-jp">手頃な価格</span>
+              </h3>
+              <p class="text-sm leading-relaxed">
+                <span class="lang-tw">由於結構簡單，與其他公司的水田自動給水系統相比，實現了極具競爭力且平實的價格。</span>
+                <span class="lang-jp">構造がシンプルなため、他社の水田用自動給水システムと比べて圧倒的に手頃な価格を実現。</span>
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-8 border border-hk relative overflow-hidden">
+            <div class="absolute -right-6 -top-6 text-[120px] font-extrabold text-hk-accent/15 leading-none">02</div>
+            <div class="relative">
+              <h3 class="font-bold text-hk-heading text-xl mb-3">
+                <span class="lang-tw">安裝簡單・無須電源工程</span>
+                <span class="lang-jp">電源工事不要・簡単設置</span>
+              </h3>
+              <p class="text-sm leading-relaxed">
+                <span class="lang-tw">安裝時只需將其連接至進水口的 PVC 管，並將兩個感測器調整至期望的水位即可。</span>
+                <span class="lang-jp">設置は水口の塩ビ管と繋ぎ、2 つのセンサーを希望の水位に合わせるだけ。</span>
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-8 border border-hk relative overflow-hidden">
+            <div class="absolute -right-6 -top-6 text-[120px] font-extrabold text-hk-accent/15 leading-none">03</div>
+            <div class="relative">
+              <h3 class="font-bold text-hk-heading text-xl mb-3">
+                <span class="lang-tw">長效續航・乾電池驅動</span>
+                <span class="lang-jp">長寿命・乾電池駆動</span>
+              </h3>
+              <p class="text-sm leading-relaxed">
+                <span class="lang-tw">僅需 4 顆一號乾電池即可運作約 6 個月。產品送達當天即可開始使用。</span>
+                <span class="lang-jp">単一電池 4 本で約 6 ヶ月間駆動。届いたその日から使えます。</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 6宮格產品圖區 -->
+        <div class="mb-20 hk-reveal">
+          <div class="text-center mb-10">
+            <span class="hk-eyebrow justify-center">PRODUCT FEATURES</span>
+            <h3 class="hk-h-decorated text-center font-display text-2xl lg:text-4xl text-hk-heading mt-3 mb-4">
+              <span class="lang-tw">六大產品特點</span>
+              <span class="lang-jp">6 つの製品特長</span>
+            </h3>
+            <p class="max-w-2xl mx-auto text-sm">
+              <span class="lang-tw">從操作方式、電池效能到輕量設計，AquaPort 在每一個細節都為農戶著想。</span>
+              <span class="lang-jp">操作方式、電池性能、軽量設計まで、農家に寄り添う細やかな設計。</span>
+            </p>
+          </div>
+
+          <!-- 附檔 6宮格產品圖版位 -->
+          <div class="rounded-2xl overflow-hidden border border-hk shadow-sm bg-white">
+            <img
+              src="assets/images/aquaport-features-6grid.png"
+              alt="AquaPort 六大產品特點圖（取自原廠 DM）"
+              class="w-full h-auto block"
+              loading="lazy"
+            />
+            <!-- 預留位 ▸ 後續可用 Elementor / Bricks 切版替換為原生 6 宮格 -->
+          </div>
+          <p class="text-xs text-center text-hk-text mt-4">
+            <span class="lang-tw">＊原廠特點圖（資料來源：北菱電興 AquaPort DM）</span>
+            <span class="lang-jp">＊メーカー特長図（出典：北菱電興 AquaPort パンフレット）</span>
+          </p>
+        </div>
+
+
+        <!-- 安裝說明 + 規格 -->
+        <div class="grid lg:grid-cols-2 gap-10 items-center mb-20 hk-reveal">
+          <div>
+            <span class="hk-eyebrow mb-4">EASY INSTALL</span>
+            <h3 class="hk-h-decorated font-display text-2xl lg:text-4xl text-hk-heading mt-3 mb-6">
+              <span class="lang-tw">安裝與收納<br>都非常簡單</span>
+              <span class="lang-jp">設置も片付けも<br>とても簡単</span>
+            </h3>
+            <div class="space-y-5">
+              <div class="flex gap-4">
+                <div class="shrink-0 w-10 h-10 rounded-full bg-hk-primary text-white flex items-center justify-center font-bold">1</div>
+                <div>
+                  <h4 class="font-bold text-hk-heading mb-1"><span class="lang-tw">連接進水口 PVC 管</span><span class="lang-jp">水口の塩ビ管に接続</span></h4>
+                  <p class="text-sm leading-relaxed"><span class="lang-tw">將主機連接到水田進水口的 PVC 管路上。</span><span class="lang-jp">本体を水田の水口にある塩ビ管に接続します。</span></p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="shrink-0 w-10 h-10 rounded-full bg-hk-primary text-white flex items-center justify-center font-bold">2</div>
+                <div>
+                  <h4 class="font-bold text-hk-heading mb-1"><span class="lang-tw">調整 2 個感測器水位</span><span class="lang-jp">2 つのセンサー水位を調整</span></h4>
+                  <p class="text-sm leading-relaxed"><span class="lang-tw">將兩個水位感測器調整至期望的高低水位。</span><span class="lang-jp">2 つのセンサーを希望の高水位・低水位に設定。</span></p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="shrink-0 w-10 h-10 rounded-full bg-hk-primary text-white flex items-center justify-center font-bold">3</div>
+                <div>
+                  <h4 class="font-bold text-hk-heading mb-1"><span class="lang-tw">放入電池即可啟動</span><span class="lang-jp">電池を入れて稼働開始</span></h4>
+                  <p class="text-sm leading-relaxed"><span class="lang-tw">放入 4 顆一號乾電池，無須電源工程，即可開始運作。</span><span class="lang-jp">単一乾電池 4 本を入れるだけ、電源工事不要で稼働開始。</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 安裝示意圖版位 -->
+          <div>
+            <div class="rounded-2xl overflow-hidden border border-hk shadow-md bg-white">
+              <img
+                src="assets/images/aquaport-installation.jpg"
+                alt="AquaPort 水田安裝示意"
+                class="w-full h-auto block"
+                loading="lazy"
+              />
+            </div>
+            <p class="text-xs text-center text-hk-text mt-4">
+              <span class="lang-tw">＊水田實地安裝示意圖</span>
+              <span class="lang-jp">＊水田設置イメージ</span>
+            </p>
+          </div>
+        </div>
+
+
+        <!-- 規格表 -->
+        <div class="bg-white border border-hk rounded-2xl overflow-hidden hk-reveal">
+          <div class="p-8 lg:p-10 bg-gradient-to-r from-hk-primary to-hk-dark text-white">
+            <h3 class="font-display font-bold text-2xl lg:text-3xl">
+              <span class="lang-tw">產品規格</span>
+              <span class="lang-jp">製品スペック</span>
+            </h3>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-hk">
+            <div class="p-6">
+              <div class="text-xs tracking-widest text-hk-text font-bold mb-2"><span class="lang-tw">主機重量</span><span class="lang-jp">本体重量</span></div>
+              <div class="text-2xl font-extrabold text-hk-heading">5.5<span class="text-base ml-1">kg</span></div>
+              <div class="text-xs mt-1 text-hk-text"><span class="lang-tw">含電池（寬版 5.8kg）</span><span class="lang-jp">電池込み（ワイド 5.8kg）</span></div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs tracking-widest text-hk-text font-bold mb-2"><span class="lang-tw">電池</span><span class="lang-jp">電池</span></div>
+              <div class="text-2xl font-extrabold text-hk-heading"><span class="lang-tw">4 顆一號</span><span class="lang-jp">単一 4 本</span></div>
+              <div class="text-xs mt-1 text-hk-text"><span class="lang-tw">D Cell 乾電池</span><span class="lang-jp">D セル乾電池</span></div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs tracking-widest text-hk-text font-bold mb-2"><span class="lang-tw">續航時間</span><span class="lang-jp">稼働時間</span></div>
+              <div class="text-2xl font-extrabold text-hk-heading"><span class="lang-tw">約 6 個月</span><span class="lang-jp">約 6 ヶ月</span></div>
+              <div class="text-xs mt-1 text-hk-text"><span class="lang-tw">每日開閉一次基準</span><span class="lang-jp">1 回／日 開閉動作</span></div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs tracking-widest text-hk-text font-bold mb-2"><span class="lang-tw">感測器</span><span class="lang-jp">センサー</span></div>
+              <div class="text-2xl font-extrabold text-hk-heading"><span class="lang-tw">2 個水位</span><span class="lang-jp">2 つの水位</span></div>
+              <div class="text-xs mt-1 text-hk-text"><span class="lang-tw">高／低自動偵測</span><span class="lang-jp">高・低を自動検知</span></div>
+            </div>
+          </div>
+          <div class="p-6 bg-hk-soft text-xs text-hk-text border-t border-hk">
+            <span class="lang-tw">＊註：以每日執行一次開閉動作為基準。實際運作時間可能因所使用的電池品牌而異。</span>
+            <span class="lang-jp">＊1 回／日開閉動作を行った場合。使用する電池により変わる場合があります。</span>
+          </div>
+        </div>
+
+
+        <!-- 額外圖片區 -->
+        <div class="mt-12 grid md:grid-cols-2 gap-6 hk-reveal">
+          <div class="rounded-2xl overflow-hidden border border-hk bg-white">
+            <img src="assets/images/aquaport-product-detail.png" alt="AquaPort 產品細節" class="w-full h-auto block" loading="lazy"/>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-hk bg-white">
+            <img src="assets/images/aquaport-on-field.jpg" alt="AquaPort 水田實景" class="w-full h-auto block" loading="lazy"/>
+          </div>
+        </div>
+
+
+        <!-- B 區段 CTA -->
+        <div class="mt-16 bg-hk-accent text-hk-heading rounded-2xl p-8 lg:p-12 flex flex-col lg:flex-row gap-6 items-center justify-between hk-reveal">
+          <div>
+            <h3 class="font-display font-bold text-xl lg:text-2xl mb-2">
+              <span class="lang-tw">AquaPort 詢價・代理合作</span>
+              <span class="lang-jp">AquaPort お見積り・代理店のお問い合わせ</span>
+            </h3>
+            <p class="text-sm opacity-90">
+              <span class="lang-tw">歡迎農會、農機通路、合作社聯繫，由台灣北菱（總代理）提供方案與報價。</span>
+              <span class="lang-jp">農協、農機販売店、組合等のお問い合わせ歓迎。台湾北菱（総代理店）よりプラン・お見積りをご案内します。</span>
+            </p>
+          </div>
+          <a href="contact.html?topic=aquaport" class="hk-btn-primary shrink-0">
+            <span class="lang-tw">立即詢價</span><span class="lang-jp">今すぐ見積依頼</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FOOTER (與首頁一致)
+         ============================================================ -->
+    <footer class="bg-hk-heading text-white/80">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-4">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded bg-hk-primary flex items-center justify-center text-white font-extrabold">北</div>
+              <div>
+                <div class="text-white font-bold"><span class="lang-tw">台灣北菱股份有限公司</span><span class="lang-jp">台湾北菱股份有限公司</span></div>
+                <div class="text-[10px] tracking-[0.2em] text-hk-accent font-semibold">TAIWAN HOKURYO CO., LTD.</div>
+              </div>
+            </div>
+            <p class="text-sm leading-relaxed text-white/60 mb-5">
+              <span class="lang-tw">連接台日的專業橋樑。1997 年成立，北菱電興株式會社 100% 獨資子公司。</span>
+              <span class="lang-jp">日台ビジネスを繋ぐ専門ブリッジ。1997 年設立、北菱電興株式会社 100% 出資子会社。</span>
+            </p>
+            <div class="text-[10px] tracking-[0.3em] text-hk-accent">[ Hello, World! ] Try the next.</div>
+          </div>
+
+          <div class="lg:col-span-3">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">服務項目</span><span class="lang-jp">サービス</span></h5>
+            <ul class="space-y-3 text-sm">
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">海外採購代行</span><span class="lang-jp">海外調達代行</span></a></li>
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">業務代行・人員代理</span><span class="lang-jp">業務代行・人員代行</span></a></li>
+              <li><a href="products.html#procurement" class="hover:text-hk-accent transition"><span class="lang-tw">進出口通關・保稅倉</span><span class="lang-jp">輸出入通関・保税倉庫</span></a></li>
+              <li><a href="products.html#aquaport"   class="hover:text-hk-accent transition">AquaPort</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-2">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">導覽</span><span class="lang-jp">ナビゲーション</span></h5>
+            <ul class="space-y-3 text-sm">
+              <li><a href="about.html"   class="hover:text-hk-accent transition"><span class="lang-tw">關於我們</span><span class="lang-jp">会社概要</span></a></li>
+              <li><a href="products.html" class="hover:text-hk-accent transition"><span class="lang-tw">產品與服務</span><span class="lang-jp">事業内容</span></a></li>
+              <li><a href="blog.html"     class="hover:text-hk-accent transition"><span class="lang-tw">最新消息</span><span class="lang-jp">インサイト</span></a></li>
+              <li><a href="contact.html"  class="hover:text-hk-accent transition"><span class="lang-tw">聯絡我們</span><span class="lang-jp">お問い合わせ</span></a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-3">
+            <h5 class="text-white text-sm font-bold mb-5"><span class="lang-tw">聯絡資訊</span><span class="lang-jp">お問い合わせ</span></h5>
+            <ul class="space-y-3 text-sm leading-relaxed">
+              <li>
+                <span class="lang-tw">台北市敦化南路 1 段 205 號<br>國際貿易大樓 (ITB) 16F 1602</span>
+                <span class="lang-jp">台北市敦化南路 1 段 205 号<br>国際貿易ビル (ITB) 16F 1602</span>
+              </li>
+              <li><a href="tel:+886227517084" class="hover:text-hk-accent transition">TEL: 02-2751-7084</a></li>
+              <li><a href="mailto:info@hokuryo.com.tw" class="hover:text-hk-accent transition">info@hokuryo.com.tw</a></li>
+              <li><a href="https://hokuryo.com.tw" class="hover:text-hk-accent transition">hokuryo.com.tw</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/50">
+          <div>© 1997 - 2026 TAIWAN HOKURYO CO., LTD. All rights reserved.</div>
+          <div>
+            <span class="lang-tw">北菱電興株式会社 100% 獨資子公司</span>
+            <span class="lang-jp">北菱電興株式会社 100% 出資子会社</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
